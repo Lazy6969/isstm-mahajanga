@@ -411,6 +411,49 @@ html[data-community-accent='amber'] .community-shell { --color-isstm-navy: #d977
     }
 }
 
+/* Hymne player (see HymnePlayer.jsx, page Historique) — small equalizer bars
+   next to the cover art that only bounce while the anthem is playing; a
+   short static height otherwise, so they still read as "a player", not a
+   broken decoration. */
+.hymne-equalizer span {
+    transform-origin: bottom;
+    transform: scaleY(0.35);
+    transition: transform 0.2s ease;
+}
+
+.hymne-equalizer.is-playing span {
+    animation: hymne-equalizer-bounce 0.9s ease-in-out infinite;
+}
+
+.hymne-equalizer.is-playing span:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.hymne-equalizer.is-playing span:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.hymne-equalizer.is-playing span:nth-child(4) {
+    animation-delay: 0.45s;
+}
+
+@keyframes hymne-equalizer-bounce {
+    0%,
+    100% {
+        transform: scaleY(0.35);
+    }
+    50% {
+        transform: scaleY(1);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hymne-equalizer.is-playing span {
+        animation: none;
+        transform: scaleY(0.7);
+    }
+}
+
 /* Per-letter reveal (see LetterRevealText.jsx) — each character fades/slides
    in with its own animation-delay set inline, so this single rule staggers
    the whole phrase. */

@@ -3,6 +3,7 @@ import Footer from '../../Components/Home/Footer';
 import EditableText from '../../Components/QuickEdit/EditableText';
 import BannerBackground from '../../Components/QuickEdit/BannerBackground';
 import SeoHead from '../../Components/QuickEdit/SeoHead';
+import HymnePlayer from '../../Components/Historique/HymnePlayer';
 
 export default function Index({ content = {} }) {
     return (
@@ -159,6 +160,8 @@ export default function Index({ content = {} }) {
                             </div>
                         </div>
                     </section>
+
+                    <HymnePlayer />
                 </article>
             </main>
 

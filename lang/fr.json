@@ -2380,5 +2380,19 @@
     "admin.filters.hide": "Masquer les filtres",
     "admin.filters.search": "Rechercher par nom...",
     "admin.corbeille.search": "Rechercher un élément supprimé...",
-    "admin.securite.search": "Rechercher par nom ou e-mail..."
+    "admin.securite.search": "Rechercher par nom ou e-mail...",
+    "historique.hymne_eyebrow": "Hymne officiel",
+    "historique.hymne_paroles": "Paroles",
+    "historique.hymne_voir_paroles": "Voir les paroles",
+    "historique.hymne_masquer_paroles": "Masquer les paroles",
+    "historique.hymne_ecouter": "Écouter l'hymne",
+    "historique.hymne_pause": "Mettre en pause",
+    "historique.hymne_progression": "Progression de la lecture",
+    "historique.hymne_boucle_on": "Activer la lecture en boucle",
+    "historique.hymne_boucle_off": "Désactiver la lecture en boucle",
+    "historique.hymne_telecharger": "Télécharger l'hymne",
+    "historique.hymne_connexion_requise": "Connectez-vous pour écouter ou télécharger l'hymne.",
+    "historique.hymne_son_on": "Activer le son",
+    "historique.hymne_son_off": "Couper le son",
+    "historique.hymne_volume": "Volume"
 }

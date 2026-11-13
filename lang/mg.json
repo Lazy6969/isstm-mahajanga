@@ -2450,5 +2450,19 @@
     "admin.filters.hide": "Afeno ny sivana",
     "admin.filters.search": "Hikaroka amin’ny anarana...",
     "admin.corbeille.search": "Hikaroka zavatra voafafa...",
-    "admin.securite.search": "Hikaroka amin’ny anarana na mailaka..."
+    "admin.securite.search": "Hikaroka amin’ny anarana na mailaka...",
+    "historique.hymne_eyebrow": "Hira ofisialy",
+    "historique.hymne_paroles": "Tononkira",
+    "historique.hymne_voir_paroles": "Asehoy ny tononkira",
+    "historique.hymne_masquer_paroles": "Afeno ny tononkira",
+    "historique.hymne_ecouter": "Hihaino ny hira",
+    "historique.hymne_pause": "Ajanona vonjimaika",
+    "historique.hymne_progression": "Fizotry ny filalaovana",
+    "historique.hymne_boucle_on": "Alefaso miverimberina",
+    "historique.hymne_boucle_off": "Atsaharo ny fiverimberenana",
+    "historique.hymne_telecharger": "Alaivo ny hira",
+    "historique.hymne_connexion_requise": "Midira mba hihaino na haka ilay hira.",
+    "historique.hymne_son_on": "Alefaso ny feo",
+    "historique.hymne_son_off": "Atsaharo ny feo",
+    "historique.hymne_volume": "Feo"
 }

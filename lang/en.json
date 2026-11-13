@@ -2485,5 +2485,19 @@
     "admin.filters.hide": "Hide filters",
     "admin.filters.search": "Search by name...",
     "admin.corbeille.search": "Search a deleted item...",
-    "admin.securite.search": "Search by name or e-mail..."
+    "admin.securite.search": "Search by name or e-mail...",
+    "historique.hymne_eyebrow": "Official anthem",
+    "historique.hymne_paroles": "Lyrics",
+    "historique.hymne_voir_paroles": "Show lyrics",
+    "historique.hymne_masquer_paroles": "Hide lyrics",
+    "historique.hymne_ecouter": "Play the anthem",
+    "historique.hymne_pause": "Pause",
+    "historique.hymne_progression": "Playback progress",
+    "historique.hymne_boucle_on": "Turn on looping",
+    "historique.hymne_boucle_off": "Turn off looping",
+    "historique.hymne_telecharger": "Download the anthem",
+    "historique.hymne_connexion_requise": "Sign in to listen to or download the anthem.",
+    "historique.hymne_son_on": "Unmute",
+    "historique.hymne_son_off": "Mute",
+    "historique.hymne_volume": "Volume"
 }

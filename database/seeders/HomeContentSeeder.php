@@ -13,6 +13,41 @@ use Illuminate\Database\Seeder;
 class HomeContentSeeder extends Seeder
 {
     /**
+     * Paroles de l'hymne de l'ISSTM ("Tanora mivoatra"), extraites de
+     * public/images/hira faneva.docx. Un hymne ne se traduit pas : ce même
+     * texte malagasy est utilisé pour les 3 colonnes de locale de
+     * 'hymne_paroles' ci-dessous.
+     */
+    private const HYMNE_PAROLES = <<<'TEXT'
+        Hira Faneva n'ISSTM — Tanora mivoatra
+
+        Couplet 1 (bis)
+        Ivotoeram-panofanana tanora, miantso ireo 'zay liana amin'ny fandrosoana
+        Na lahy na vavy ka zanak'i Gasikara, avia mitsidiha manontany aza misalasala
+        ↳ Refrain
+
+        Couplet 2 (bis)
+        Te hampitombo ireo fahalalàna ianao, hanatsara ny enti-miady amin'ny fiainana
+        Mba hahaleo tena tsy hiankin-doha foana, ho olona ilaina eo amin'ny fiara-monina
+        ↳ Refrain
+
+        Couplet 3 (bis)
+        Ho anao izay maniry ny hivoatra hatrany, hisondrotra avo sy ho olom-banona
+        Tongava miofana ao amin'ISSTM, tsy hanenenanao mandritra ny androm-piainana
+        ↳ Refrain
+
+        Refrain
+        ISSTM, vahaolana,
+        ISSTM, miandry anao,
+        ISSTM, Institut Supérieur des Sciences et Technologies de Mahajanga ;
+        ISSTM, vahaolana,
+        ISSTM, miandry anao,
+        ISSTM, avia tongava ianao ry tanora dia matokia.
+
+        Paroles et musique : Dr RAKOTOVELO Geoslin, RASOANIRINA Monique Angelica
+        TEXT;
+
+    /**
      * Run the database seeds.
      */
     public function run(): void
@@ -257,6 +292,18 @@ class HomeContentSeeder extends Seeder
                 'Organized according to the LMD (License-Master-Doctorate) system, the training is fee-paying and leads to a Professional License and Research Master diploma in the following fields:',
                 "Voalamina araka ny rafitra LMD (Licence-Master-Doctorat), ny fiofanana dia andoavam-bola ary mitondra mankany amin'ny fahazoana diplaoma Licence Professionnelle sy Master Recherche amin'ireto sampana manaraka ireto :",
             ],
+
+            // Lecteur de l'hymne, tout en bas de la page Historique (voir HymnePlayer.jsx)
+            'hymne_titre' => ["Hymne de l'ISSTM", 'ISSTM Anthem', "Hiran'ny ISSTM"],
+            'hymne_texte' => [
+                "Écoutez l'hymne officiel de l'Institut Supérieur des Sciences, Techniques et Métiers de Mahajanga.",
+                'Listen to the official anthem of the Institut Supérieur des Sciences, Techniques et Métiers de Mahajanga.',
+                "Henoy ny hira ofisialin'ny Institut Supérieur des Sciences, Techniques et Métiers any Mahajanga.",
+            ],
+            // Un hymne ne se traduit pas — les paroles restent en malagasy
+            // dans les 3 colonnes de locale, à l'identique (extraites de
+            // public/images/hira faneva.docx).
+            'hymne_paroles' => [self::HYMNE_PAROLES, self::HYMNE_PAROLES, self::HYMNE_PAROLES],
 
             // Bourse
             'bourse_lien1_titre' => ["Postuler pour une Bourse d'État", "Postuler pour une Bourse d'État", "Postuler pour une Bourse d'État"],
