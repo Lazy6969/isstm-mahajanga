@@ -18,14 +18,21 @@ return new class extends Migration
         });
 
         Schema::table('community_documents', function (Blueprint $table) {
-            // SQLite refuses to drop a column still referenced by an index
-            // (MySQL is more lenient about it) — the composite index from the
-            // earlier migration must go first.
+            // MariaDB refuses to drop an index still backing a foreign key
+            // constraint ("needed in a foreign key constraint"), so the FK
+            // must go first; SQLite in turn refuses to drop a column still
+            // referenced by an index, so the index must go before the
+            // column. This order (foreign key, then index, then column)
+            // satisfies every engine.
+            $table->dropForeign(['filiere_id']);
+        });
+
+        Schema::table('community_documents', function (Blueprint $table) {
             $table->dropIndex(['filiere_id', 'niveau']);
         });
 
         Schema::table('community_documents', function (Blueprint $table) {
-            $table->dropConstrainedForeignId('filiere_id');
+            $table->dropColumn('filiere_id');
             // 'niveau' (single L1..M2 string) becomes 'niveaux' (JSON array of
             // the same codes) — several levels can now be tagged at once.
             $table->json('niveaux')->nullable()->after('category');
