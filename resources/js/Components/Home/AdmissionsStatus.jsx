@@ -84,7 +84,7 @@ function useAdmissionsData() {
         texteKey,
         titre: content?.[titreKey],
         texte: content?.[texteKey],
-        image: content?.admissions_image_path ?? 'images/accueil-rejoindre.png',
+        image: content?.admissions_image_path ?? 'images/accueil-rejoindre.webp',
         dateLimiteRaw,
         dateLimite,
         contentStyles,
@@ -206,7 +206,7 @@ function DesignCard({ d, pencil }) {
                     (roughly where that bar sits in the source image) so only
                     its head and hands show above the card. */}
                 <img
-                    src="/images/robot-admissions.png"
+                    src="/images/robot-admissions.webp"
                     alt=""
                     aria-hidden="true"
                     className="pointer-events-none absolute top-0 left-1/2 z-20 hidden h-24 w-auto -translate-x-1/2 -translate-y-3/4 sm:block"

@@ -193,7 +193,7 @@ export default function NotificationBell() {
                                     }`}
                                 >
                                     <img
-                                        src={notification.actor?.avatar_path ? `/storage/${notification.actor.avatar_path}` : '/images/logo-isstm.jpg'}
+                                        src={notification.actor?.avatar_path ? `/storage/${notification.actor.avatar_path}` : '/images/logo-isstm.webp'}
                                         alt=""
                                         className="mt-0.5 h-8 w-8 flex-shrink-0 rounded-full object-cover"
                                     />

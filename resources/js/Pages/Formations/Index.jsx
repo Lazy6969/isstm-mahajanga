@@ -81,12 +81,12 @@ export default function Index() {
                 <div className="relative z-10 mx-auto max-w-5xl space-y-12 px-6 py-12">
                 <div className="relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-slate-100 dark:ring-slate-700">
                     <img
-                        src={`/${content.formations_offre_image ?? 'images/slide1.jpg'}`}
+                        src={`/${content.formations_offre_image ?? 'images/slide1.webp'}`}
                         alt="Offre de formation LMD — ISSTM Mahajanga"
                         className="h-auto w-full object-cover"
                         style={imageStyleToCss(contentStyles?.formations_offre_image)}
                     />
-                    <EditableImage contentKey="formations_offre_image" value={content.formations_offre_image ?? 'images/slide1.jpg'} />
+                    <EditableImage contentKey="formations_offre_image" value={content.formations_offre_image ?? 'images/slide1.webp'} />
                 </div>
 
                 <p className="text-base leading-relaxed text-slate-700 dark:text-slate-200">

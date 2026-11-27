@@ -19,7 +19,7 @@ import { useTranslations } from '../../lib/useTranslations';
 export default function RejoignezNous() {
     const { t } = useTranslations();
     const { content, contentStyles, admissionsOpen } = usePage().props;
-    const image = content.accueil_rejoindre_image_path ?? 'images/accueil-rejoindre.png';
+    const image = content.accueil_rejoindre_image_path ?? 'images/accueil-rejoindre.webp';
     const eyebrowKey = admissionsOpen ? 'accueil_rejoindre_eyebrow_ouvert' : 'accueil_rejoindre_eyebrow_ferme';
     const eyebrowDefault = admissionsOpen
         ? t('accueil.rejoindre_eyebrow_ouvert', 'Admissions ouvertes')

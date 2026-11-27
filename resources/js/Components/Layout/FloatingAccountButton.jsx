@@ -40,7 +40,7 @@ export default function FloatingAccountButton({ size = 'h-12 w-12', side = 'righ
                 aria-label={t('profil.mon_compte', 'Mon compte')}
             >
                 <img
-                    src={user.avatar_path ? `/storage/${user.avatar_path}` : '/images/logo-isstm.jpg'}
+                    src={user.avatar_path ? `/storage/${user.avatar_path}` : '/images/logo-isstm.webp'}
                     alt=""
                     className="h-full w-full rounded-full object-cover"
                 />

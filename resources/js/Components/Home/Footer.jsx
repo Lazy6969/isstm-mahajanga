@@ -130,14 +130,14 @@ export default function Footer() {
                                 className="inline-flex items-center rounded-md bg-white p-1.5"
                             >
                                 <img
-                                    src={`/${content.footer_logo_mesupres ?? 'images/partenariat/mesupres.png'}`}
+                                    src={`/${content.footer_logo_mesupres ?? 'images/partenariat/mesupres.webp'}`}
                                     alt="MESUPRES"
                                     className="h-11 w-auto object-contain"
                                 />
                             </a>
                             <EditableImage
                                 contentKey="footer_logo_mesupres"
-                                value={content.footer_logo_mesupres ?? 'images/partenariat/mesupres.png'}
+                                value={content.footer_logo_mesupres ?? 'images/partenariat/mesupres.webp'}
                             />
                         </div>
                     </div>

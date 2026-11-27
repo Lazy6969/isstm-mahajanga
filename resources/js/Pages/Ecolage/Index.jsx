@@ -249,7 +249,7 @@ export default function Index({ student, payments, totals, options }) {
                     <span className="pointer-events-none absolute -right-10 -top-14 h-52 w-52 rounded-full bg-white/10 blur-3xl" />
                     <div className="relative flex flex-col gap-4 sm:flex-row sm:items-center">
                         <img
-                            src={student.avatar_path ? `/storage/${student.avatar_path}` : '/images/logo-isstm.jpg'}
+                            src={student.avatar_path ? `/storage/${student.avatar_path}` : '/images/logo-isstm.webp'}
                             alt=""
                             className="h-16 w-16 flex-shrink-0 rounded-2xl object-cover ring-2 ring-white/30"
                         />

@@ -18,7 +18,7 @@ class TeacherSeeder extends Seeder
                 'specialty_en' => 'Physics',
                 'specialty_mg' => 'Fizika',
                 'email' => 'rakotovelo.geoslin@isstm.mg',
-                'photo_path' => 'images/teachers/rakotovelo-geoslin.jpg',
+                'photo_path' => 'images/teachers/rakotovelo-geoslin.webp',
                 'display_order' => 1,
             ],
             [
@@ -46,7 +46,7 @@ class TeacherSeeder extends Seeder
                 'specialty_en' => 'Electricity',
                 'specialty_mg' => 'Herinaratra',
                 'email' => 'manasina.ruffin@isstm.mg',
-                'photo_path' => 'images/directeur.jpg',
+                'photo_path' => 'images/directeur.webp',
                 'display_order' => 4,
             ],
             [
@@ -56,7 +56,7 @@ class TeacherSeeder extends Seeder
                 'specialty_en' => 'Nuclear and automatic engineering',
                 'specialty_mg' => 'Injeniera nokleary sy mandeha ho azy',
                 'email' => 'ramarojaona.hubert@isstm.mg',
-                'photo_path' => 'images/teachers/ramarojaona-hubert.jpg',
+                'photo_path' => 'images/teachers/ramarojaona-hubert.webp',
                 'display_order' => 5,
             ],
             [
@@ -66,7 +66,7 @@ class TeacherSeeder extends Seeder
                 'specialty_en' => 'Physics',
                 'specialty_mg' => 'Fizika',
                 'email' => 'maxwell.djaffard@isstm.mg',
-                'photo_path' => 'images/teachers/maxwell-djaffard.jpg',
+                'photo_path' => 'images/teachers/maxwell-djaffard.webp',
                 'display_order' => 6,
             ],
             [
@@ -76,7 +76,7 @@ class TeacherSeeder extends Seeder
                 'specialty_en' => 'Physics',
                 'specialty_mg' => 'Fizika',
                 'email' => 'hary.jean@isstm.mg',
-                'photo_path' => 'images/teachers/hary-jean.jpg',
+                'photo_path' => 'images/teachers/hary-jean.webp',
                 'display_order' => 7,
             ],
             [
@@ -86,7 +86,7 @@ class TeacherSeeder extends Seeder
                 'specialty_en' => 'Energy',
                 'specialty_mg' => 'Angovo',
                 'email' => 'randriamaitso.telesphore@isstm.mg',
-                'photo_path' => 'images/teachers/randriamaitso-telesphore.jpg',
+                'photo_path' => 'images/teachers/randriamaitso-telesphore.webp',
                 'display_order' => 8,
             ],
             [
@@ -96,7 +96,7 @@ class TeacherSeeder extends Seeder
                 'specialty_en' => 'Physics',
                 'specialty_mg' => 'Fizika',
                 'email' => 'tsangandrazana.annicet.judicael@isstm.mg',
-                'photo_path' => 'images/teachers/tsangandrazana-annicet-judicael.jpg',
+                'photo_path' => 'images/teachers/tsangandrazana-annicet-judicael.webp',
                 'display_order' => 9,
             ],
             [
@@ -106,7 +106,7 @@ class TeacherSeeder extends Seeder
                 'specialty_en' => 'Industrial electronics',
                 'specialty_mg' => 'Elektronika indostrialy',
                 'email' => 'andrianirina.charles.bernard@isstm.mg',
-                'photo_path' => 'images/teachers/andrianirina-charles-bernard.jpg',
+                'photo_path' => 'images/teachers/andrianirina-charles-bernard.webp',
                 'display_order' => 10,
             ],
             [
@@ -116,7 +116,7 @@ class TeacherSeeder extends Seeder
                 'specialty_en' => 'Electronics and computing',
                 'specialty_mg' => 'Elektronika sy informatika',
                 'email' => 'andrianantenaina.chrysostome@isstm.mg',
-                'photo_path' => 'images/teachers/andrianantenaina-chrysostome.jpg',
+                'photo_path' => 'images/teachers/andrianantenaina-chrysostome.webp',
                 'display_order' => 11,
             ],
             [
@@ -126,7 +126,7 @@ class TeacherSeeder extends Seeder
                 'specialty_en' => 'Physics and automation',
                 'specialty_mg' => 'Fizika sy fanaratana',
                 'email' => 'ralovas@gmail.com',
-                'photo_path' => 'images/teachers/rakotomalala-lovasoa.jpg',
+                'photo_path' => 'images/teachers/rakotomalala-lovasoa.webp',
                 'display_order' => 12,
             ],
             [
@@ -136,7 +136,7 @@ class TeacherSeeder extends Seeder
                 'specialty_en' => 'Industrial electronics and computing',
                 'specialty_mg' => 'Elektronika indostrialy sy informatika',
                 'email' => 'andriniriniaimalaza.fanambinantsoa.philibert@isstm.mg',
-                'photo_path' => 'images/teachers/andriniriniaimalaza-philibert.jpg',
+                'photo_path' => 'images/teachers/andriniriniaimalaza-philibert.webp',
                 'display_order' => 13,
             ],
             [
@@ -146,7 +146,7 @@ class TeacherSeeder extends Seeder
                 'specialty_en' => 'Software engineering',
                 'specialty_mg' => 'Injeniera rindrambaiko',
                 'email' => 'frederic.moise@isstm.mg',
-                'photo_path' => 'images/teachers/frederic-moise.jpg',
+                'photo_path' => 'images/teachers/frederic-moise.webp',
                 'display_order' => 14,
             ],
             [
@@ -156,7 +156,7 @@ class TeacherSeeder extends Seeder
                 'specialty_en' => 'Computer science',
                 'specialty_mg' => 'Informatika',
                 'email' => 'bezara.florent@isstm.mg',
-                'photo_path' => 'images/teachers/bezara-florent.jpg',
+                'photo_path' => 'images/teachers/bezara-florent.webp',
                 'display_order' => 15,
             ],
             [
@@ -166,7 +166,7 @@ class TeacherSeeder extends Seeder
                 'specialty_en' => 'Biomedical',
                 'specialty_mg' => 'Biomedikaly',
                 'email' => 'melrak.nykaise@isstm.mg',
-                'photo_path' => 'images/teachers/melrak-nykaise.jpg',
+                'photo_path' => 'images/teachers/melrak-nykaise.webp',
                 'display_order' => 16,
             ],
             [
@@ -176,7 +176,7 @@ class TeacherSeeder extends Seeder
                 'specialty_en' => 'Physics and applications',
                 'specialty_mg' => 'Fizika sy fampiharana',
                 'email' => 'ruino.randriamihaja@isstm.mg',
-                'photo_path' => 'images/teachers/ruino-randriamihaja.jpg',
+                'photo_path' => 'images/teachers/ruino-randriamihaja.webp',
                 'display_order' => 17,
             ],
             [

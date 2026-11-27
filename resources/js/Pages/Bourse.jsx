@@ -25,7 +25,7 @@ export default function Bourse({ content = {} }) {
     const links = [
         {
             key: 'bourse_lien1',
-            logo: content.bourse_lien1_logo ?? 'images/partenariat/mesupres.png',
+            logo: content.bourse_lien1_logo ?? 'images/partenariat/mesupres.webp',
             title: t(
                 'bourse.externe_titre',
                 "Postuler pour une Bourse d'État",
@@ -39,7 +39,7 @@ export default function Bourse({ content = {} }) {
         },
         {
             key: 'bourse_lien2',
-            logo: content.bourse_lien2_logo ?? 'images/partenariat/tresor-public.png',
+            logo: content.bourse_lien2_logo ?? 'images/partenariat/tresor-public.webp',
             title: t(
                 'bourse.tresor_titre',
                 'Créer votre portefeuille Trésor Public',

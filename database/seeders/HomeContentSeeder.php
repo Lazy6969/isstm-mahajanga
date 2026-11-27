@@ -113,36 +113,36 @@ class HomeContentSeeder extends Seeder
     private function seedImages(): void
     {
         $images = [
-            'directeur_image_path' => 'images/directeur.jpg',
-            'mission_image_path' => 'images/mission.jpg',
-            'vision_image_path' => 'images/vision.jpg',
-            'logo_image_path' => 'images/logo-isstm.jpg',
-            'bourse_lien1_logo' => 'images/partenariat/mesupres.png',
-            'bourse_lien2_logo' => 'images/partenariat/tresor-public.png',
-            'bourse_lien3_logo' => 'images/bourse-indisponible.png',
-            'associations_logo' => 'images/aei.jpeg',
-            'associations_galerie_1' => 'images/portal_assoc_4.jpg',
-            'associations_galerie_2' => 'images/portal_assoc_5.jpg',
-            'associations_galerie_3' => 'images/portal_assoc_6.jpg',
-            'vie_etudiante_image_1' => 'images/campus/etudiant1.png',
-            'vie_etudiante_image_2' => 'images/campus/etudiant2.png',
-            'vie_etudiante_campus_logo' => 'images/umg.jpg',
-            'vie_etudiante_associations_logo' => 'images/aei.jpeg',
-            'vie_etudiante_campus_slide_1' => 'images/portal_campus_1.jpg',
-            'vie_etudiante_campus_slide_2' => 'images/portal_campus_2.jpg',
-            'vie_etudiante_campus_slide_3' => 'images/portal_campus_3.jpg',
-            'vie_etudiante_associations_slide_1' => 'images/portal_assoc_4.jpg',
-            'vie_etudiante_associations_slide_2' => 'images/portal_assoc_5.jpg',
-            'vie_etudiante_associations_slide_3' => 'images/portal_assoc_6.jpg',
-            'equipe_membre_1_photo' => 'images/etudiant/mirindra.jpeg',
-            'equipe_membre_2_photo' => 'images/etudiant/safidy1-visage.jpg',
-            'equipe_membre_3_photo' => 'images/etudiant/jameelah.jpg',
-            'equipe_membre_4_photo' => 'images/etudiant/tanael.jpg',
+            'directeur_image_path' => 'images/directeur.webp',
+            'mission_image_path' => 'images/mission.webp',
+            'vision_image_path' => 'images/vision.webp',
+            'logo_image_path' => 'images/logo-isstm.webp',
+            'bourse_lien1_logo' => 'images/partenariat/mesupres.webp',
+            'bourse_lien2_logo' => 'images/partenariat/tresor-public.webp',
+            'bourse_lien3_logo' => 'images/bourse-indisponible.webp',
+            'associations_logo' => 'images/aei.webp',
+            'associations_galerie_1' => 'images/portal_assoc_4.webp',
+            'associations_galerie_2' => 'images/portal_assoc_5.webp',
+            'associations_galerie_3' => 'images/portal_assoc_6.webp',
+            'vie_etudiante_image_1' => 'images/campus/etudiant1.webp',
+            'vie_etudiante_image_2' => 'images/campus/etudiant2.webp',
+            'vie_etudiante_campus_logo' => 'images/umg.webp',
+            'vie_etudiante_associations_logo' => 'images/aei.webp',
+            'vie_etudiante_campus_slide_1' => 'images/portal_campus_1.webp',
+            'vie_etudiante_campus_slide_2' => 'images/portal_campus_2.webp',
+            'vie_etudiante_campus_slide_3' => 'images/portal_campus_3.webp',
+            'vie_etudiante_associations_slide_1' => 'images/portal_assoc_4.webp',
+            'vie_etudiante_associations_slide_2' => 'images/portal_assoc_5.webp',
+            'vie_etudiante_associations_slide_3' => 'images/portal_assoc_6.webp',
+            'equipe_membre_1_photo' => 'images/etudiant/mirindra.webp',
+            'equipe_membre_2_photo' => 'images/etudiant/safidy1-visage.webp',
+            'equipe_membre_3_photo' => 'images/etudiant/jameelah.webp',
+            'equipe_membre_4_photo' => 'images/etudiant/tanael.webp',
             'footer_logo_isstm' => 'images/logo-isstm.svg',
             'footer_logo_umg' => 'images/partenariat/universite-mahajanga-footer.svg',
-            'footer_logo_mesupres' => 'images/partenariat/mesupres.png',
-            'formations_offre_image' => 'images/formations-offre.png',
-            'inscription_bred_logo' => 'images/partenariat/bre.jpg',
+            'footer_logo_mesupres' => 'images/partenariat/mesupres.webp',
+            'formations_offre_image' => 'images/formations-offre.webp',
+            'inscription_bred_logo' => 'images/partenariat/bre.webp',
         ];
 
         foreach ($images as $key => $path) {
@@ -517,7 +517,7 @@ class HomeContentSeeder extends Seeder
                 'Join ISSTM and build your future',
                 "Miditra ao amin'ny ISSTM ka manorena ny hoavinao",
             ],
-            'accueil_rejoindre_image_path' => ['images/accueil-rejoindre.png', 'images/accueil-rejoindre.png', 'images/accueil-rejoindre.png'],
+            'accueil_rejoindre_image_path' => ['images/accueil-rejoindre.webp', 'images/accueil-rejoindre.webp', 'images/accueil-rejoindre.webp'],
             'accueil_rejoindre_aide_bouton' => [
                 "Aide pour Comment s'inscrire à l'ISSTM ?",
                 'Help: How to register at ISSTM?',
@@ -540,7 +540,7 @@ class HomeContentSeeder extends Seeder
                 'Admissions are currently closed. Check back soon or contact us to learn more about the next session.',
                 "Mihidy amin'izao fotoana izao ny fidirana. Avia indray tsy ho ela na mifandraisa aminay mba hahafantarana bebe kokoa momba ny fotoana manaraka.",
             ],
-            'admissions_image_path' => ['images/accueil-rejoindre.png', 'images/accueil-rejoindre.png', 'images/accueil-rejoindre.png'],
+            'admissions_image_path' => ['images/accueil-rejoindre.webp', 'images/accueil-rejoindre.webp', 'images/accueil-rejoindre.webp'],
             'admissions_bouton' => ['Lancer ma candidature', 'Start my application', 'Manomboka ny fangatahako'],
 
             // En-tête du site (logo + nom de l'établissement) — partagé par
@@ -559,7 +559,7 @@ class HomeContentSeeder extends Seeder
                 'Enter your file number to see where your application stands.',
                 "Ampidiro ny laharan'ny antontan-taratasinao mba hahafantarana ny fizotry ny fangatahanao.",
             ],
-            'accueil_suivi_image_path' => ['images/suivi-dossier-bg.jpg', 'images/suivi-dossier-bg.jpg', 'images/suivi-dossier-bg.jpg'],
+            'accueil_suivi_image_path' => ['images/suivi-dossier-bg.webp', 'images/suivi-dossier-bg.webp', 'images/suivi-dossier-bg.webp'],
 
             // Style des cartes (valeur non affichée — seule la colonne `style` compte, voir lib/cardStyle.js)
             'accueil_filieres_carte' => ['Style des cartes filières', 'Programs card style', 'Endrika kaoty sampana'],
@@ -907,7 +907,7 @@ class HomeContentSeeder extends Seeder
                 'Your future starts here',
                 'Manomboka eto ny hoavinao',
             ],
-            'rejoindre_hero_image_path' => ['images/rejoindre-hero.jpg', 'images/rejoindre-hero.jpg', 'images/rejoindre-hero.jpg'],
+            'rejoindre_hero_image_path' => ['images/rejoindre-hero.webp', 'images/rejoindre-hero.webp', 'images/rejoindre-hero.webp'],
 
             // Les 4 étapes de l'inscription, juste au-dessus du footer sur la page Rejoindre
             'rejoindre_etapes_titre' => [
@@ -968,7 +968,7 @@ class HomeContentSeeder extends Seeder
                 'Enter your file number to check its status.',
                 "Ampidiro ny laharan'ny antontan-taratasinao mba hahafantarana ny toerana misy azy.",
             ],
-            'suivi_banniere_image_path' => ['images/suivi-dossier-bg.jpg', 'images/suivi-dossier-bg.jpg', 'images/suivi-dossier-bg.jpg'],
+            'suivi_banniere_image_path' => ['images/suivi-dossier-bg.webp', 'images/suivi-dossier-bg.webp', 'images/suivi-dossier-bg.webp'],
 
             // Optional photo behind each page's navy title banner — empty by
             // default (plain navy, as every banner already looked), uploaded
@@ -998,7 +998,7 @@ class HomeContentSeeder extends Seeder
             'reinscription_banniere_image_path' => ['', '', ''],
             // Already had a real photo, hardcoded — seeded with it so wiring it
             // up to EditableImage doesn't blank the banner out on first load.
-            'inscription_banniere_image_path' => ['images/portal_campus_1.jpg', 'images/portal_campus_1.jpg', 'images/portal_campus_1.jpg'],
+            'inscription_banniere_image_path' => ['images/portal_campus_1.webp', 'images/portal_campus_1.webp', 'images/portal_campus_1.webp'],
 
             'contact_titre' => ['Contactez-nous', 'Contact us', 'Mifandraisa aminay'],
             'contact_soustitre' => [
@@ -1410,16 +1410,16 @@ class HomeContentSeeder extends Seeder
                 'Beyond academics, student life is rich in activities. Discover our sports, cultural and academic clubs to grow and develop new skills.',
                 "Ankoatry ny fianarana, be zavatra atao ny fiainan'ny mpianatra. Fantaro ireo klioba fanatanjahantena, kolontsaina ary akademika mba hivelaranao sy hampivoaranao fahaizana vaovao.",
             ],
-            'vie_etudiante_intro1_image_path' => ['images/diplome-etudiant.png', 'images/diplome-etudiant.png', 'images/diplome-etudiant.png'],
-            'vie_etudiante_intro2_image_path' => ['images/diplomes-groupe.png', 'images/diplomes-groupe.png', 'images/diplomes-groupe.png'],
-            'vie_etudiante_campus_logo_image_path' => ['images/umg.jpg', 'images/umg.jpg', 'images/umg.jpg'],
-            'vie_etudiante_campus_slide1_image_path' => ['images/portal_campus_1.jpg', 'images/portal_campus_1.jpg', 'images/portal_campus_1.jpg'],
-            'vie_etudiante_campus_slide2_image_path' => ['images/portal_campus_2.jpg', 'images/portal_campus_2.jpg', 'images/portal_campus_2.jpg'],
-            'vie_etudiante_campus_slide3_image_path' => ['images/portal_campus_3.jpg', 'images/portal_campus_3.jpg', 'images/portal_campus_3.jpg'],
-            'vie_etudiante_assoc_logo_image_path' => ['images/aei.jpeg', 'images/aei.jpeg', 'images/aei.jpeg'],
-            'vie_etudiante_assoc_slide1_image_path' => ['images/portal_assoc_4.jpg', 'images/portal_assoc_4.jpg', 'images/portal_assoc_4.jpg'],
-            'vie_etudiante_assoc_slide2_image_path' => ['images/portal_assoc_5.jpg', 'images/portal_assoc_5.jpg', 'images/portal_assoc_5.jpg'],
-            'vie_etudiante_assoc_slide3_image_path' => ['images/portal_assoc_6.jpg', 'images/portal_assoc_6.jpg', 'images/portal_assoc_6.jpg'],
+            'vie_etudiante_intro1_image_path' => ['images/diplome-etudiant.webp', 'images/diplome-etudiant.webp', 'images/diplome-etudiant.webp'],
+            'vie_etudiante_intro2_image_path' => ['images/diplomes-groupe.webp', 'images/diplomes-groupe.webp', 'images/diplomes-groupe.webp'],
+            'vie_etudiante_campus_logo_image_path' => ['images/umg.webp', 'images/umg.webp', 'images/umg.webp'],
+            'vie_etudiante_campus_slide1_image_path' => ['images/portal_campus_1.webp', 'images/portal_campus_1.webp', 'images/portal_campus_1.webp'],
+            'vie_etudiante_campus_slide2_image_path' => ['images/portal_campus_2.webp', 'images/portal_campus_2.webp', 'images/portal_campus_2.webp'],
+            'vie_etudiante_campus_slide3_image_path' => ['images/portal_campus_3.webp', 'images/portal_campus_3.webp', 'images/portal_campus_3.webp'],
+            'vie_etudiante_assoc_logo_image_path' => ['images/aei.webp', 'images/aei.webp', 'images/aei.webp'],
+            'vie_etudiante_assoc_slide1_image_path' => ['images/portal_assoc_4.webp', 'images/portal_assoc_4.webp', 'images/portal_assoc_4.webp'],
+            'vie_etudiante_assoc_slide2_image_path' => ['images/portal_assoc_5.webp', 'images/portal_assoc_5.webp', 'images/portal_assoc_5.webp'],
+            'vie_etudiante_assoc_slide3_image_path' => ['images/portal_assoc_6.webp', 'images/portal_assoc_6.webp', 'images/portal_assoc_6.webp'],
 
             'bibliotheque_titre' => ['Bibliothèque', 'Library', 'Tranombokisa'],
             'bibliotheque_soustitre' => [
@@ -1432,8 +1432,8 @@ class HomeContentSeeder extends Seeder
                 "ISSTM's library provides official thesis templates, alumni theses and projects, as well as the institution's entire documentary collection.",
                 "Ny tranombokin'ny ISSTM manome ny maodely fanoratana tahirin-kevitra ofisialy, ny tahirin-kevitra sy tetikasan'ny mpianatra taloha, ary ny tahiry an-tsoratra rehetra an'ny sekoly.",
             ],
-            'bibliotheque_intro_image_path' => ['images/diplomes-groupe.png', 'images/diplomes-groupe.png', 'images/diplomes-groupe.png'],
-            'bibliotheque_banniere_image_path' => ['images/bibliotheque-salle-info.jpg', 'images/bibliotheque-salle-info.jpg', 'images/bibliotheque-salle-info.jpg'],
+            'bibliotheque_intro_image_path' => ['images/diplomes-groupe.webp', 'images/diplomes-groupe.webp', 'images/diplomes-groupe.webp'],
+            'bibliotheque_banniere_image_path' => ['images/bibliotheque-salle-info.webp', 'images/bibliotheque-salle-info.webp', 'images/bibliotheque-salle-info.webp'],
 
             'bibliotheque_seo_titre' => ['Bibliothèque', 'Library', 'Tranombokisa'],
             'bibliotheque_seo_description' => [
@@ -1445,37 +1445,37 @@ class HomeContentSeeder extends Seeder
             // Photos de l'inauguration de la bibliothèque numérique (10 avril
             // 2024) — chaque diapositive a sa propre image et sa propre
             // légende, éditables indépendamment via le crayon admin.
-            'bibliotheque_slide1_image_path' => ['images/bibliotheque/slide1.jpg', 'images/bibliotheque/slide1.jpg', 'images/bibliotheque/slide1.jpg'],
+            'bibliotheque_slide1_image_path' => ['images/bibliotheque/slide1.webp', 'images/bibliotheque/slide1.webp', 'images/bibliotheque/slide1.webp'],
             'bibliotheque_slide1_texte' => [
                 "Bibliothèque numérique de l'ISSTM, en partenariat avec Peace Corps Madagascar — inaugurée le 10 avril 2024.",
                 "ISSTM's digital library, in partnership with Peace Corps Madagascar — inaugurated on April 10, 2024.",
                 "Tranombokim-barotra an'ny ISSTM, miara-miasa amin'ny Peace Corps Madagasikara — natokana tamin'ny 10 aprily 2024.",
             ],
-            'bibliotheque_slide2_image_path' => ['images/bibliotheque/slide2.jpg', 'images/bibliotheque/slide2.jpg', 'images/bibliotheque/slide2.jpg'],
+            'bibliotheque_slide2_image_path' => ['images/bibliotheque/slide2.webp', 'images/bibliotheque/slide2.webp', 'images/bibliotheque/slide2.webp'],
             'bibliotheque_slide2_texte' => [
                 "Les mentions de l'ISSTM : Génies Civils, Technologies Industrielles, et Sciences et Techniques du Numérique et Physiques Appliquées.",
                 "ISSTM's fields of study: Civil Engineering, Industrial Technologies, and Digital Science & Applied Physics.",
                 "Ireo sampana ao amin'ny ISSTM: Jeny Sivily, Teknolojia Indostrialy, ary Siansa sy Teknika Nomerika sy Fizika Ampiharina.",
             ],
-            'bibliotheque_slide3_image_path' => ['images/bibliotheque/slide3.jpg', 'images/bibliotheque/slide3.jpg', 'images/bibliotheque/slide3.jpg'],
+            'bibliotheque_slide3_image_path' => ['images/bibliotheque/slide3.webp', 'images/bibliotheque/slide3.webp', 'images/bibliotheque/slide3.webp'],
             'bibliotheque_slide3_texte' => [
                 "La bibliothèque numérique s'étend aussi à l'École des Langues et Civilisations Internationales (ELCI).",
                 'The digital library also extends to the School of International Languages and Civilizations (ELCI).',
                 "Mitatra hatrany amin'ny Sekolin'ny Fiteny sy Sivilizasiona Iraisam-pirenena (ELCI) koa ny tranombokim-barotra.",
             ],
-            'bibliotheque_slide4_image_path' => ['images/bibliotheque/slide4.jpg', 'images/bibliotheque/slide4.jpg', 'images/bibliotheque/slide4.jpg'],
+            'bibliotheque_slide4_image_path' => ['images/bibliotheque/slide4.webp', 'images/bibliotheque/slide4.webp', 'images/bibliotheque/slide4.webp'],
             'bibliotheque_slide4_texte' => [
                 'La salle informatique de la bibliothèque numérique, équipée pour la consultation en ligne.',
                 "The digital library's computer room, equipped for online consultation.",
                 "Ny efitrano informatika an'ny tranombokim-barotra, voaomana hijerena an-tserasera.",
             ],
-            'bibliotheque_slide5_image_path' => ['images/bibliotheque/slide5.jpg', 'images/bibliotheque/slide5.jpg', 'images/bibliotheque/slide5.jpg'],
+            'bibliotheque_slide5_image_path' => ['images/bibliotheque/slide5.webp', 'images/bibliotheque/slide5.webp', 'images/bibliotheque/slide5.webp'],
             'bibliotheque_slide5_texte' => [
                 'Inauguration officielle de la bibliothèque numérique, le 10 avril 2024.',
                 'Official inauguration of the digital library, on April 10, 2024.',
                 "Fanokanana ofisialy ny tranombokim-barotra, tamin'ny 10 aprily 2024.",
             ],
-            'bibliotheque_slide6_image_path' => ['images/bibliotheque/slide6.jpg', 'images/bibliotheque/slide6.jpg', 'images/bibliotheque/slide6.jpg'],
+            'bibliotheque_slide6_image_path' => ['images/bibliotheque/slide6.webp', 'images/bibliotheque/slide6.webp', 'images/bibliotheque/slide6.webp'],
             'bibliotheque_slide6_texte' => [
                 "Un espace de travail numérique au service des étudiants de l'ISSTM.",
                 "A digital workspace serving ISSTM's students.",
@@ -1573,9 +1573,9 @@ class HomeContentSeeder extends Seeder
     private function seedHeroSlides(): void
     {
         $slides = [
-            ['image_path' => 'images/slide1.jpg', 'display_order' => 1],
-            ['image_path' => 'images/slide2.jpg', 'display_order' => 2],
-            ['image_path' => 'images/slide3.jpg', 'display_order' => 3],
+            ['image_path' => 'images/slide1.webp', 'display_order' => 1],
+            ['image_path' => 'images/slide2.webp', 'display_order' => 2],
+            ['image_path' => 'images/slide3.webp', 'display_order' => 3],
         ];
 
         foreach ($slides as $slide) {
@@ -1592,7 +1592,7 @@ class HomeContentSeeder extends Seeder
             [
                 'author_name' => 'Tanael Jaosoa',
                 'program' => 'Génie Informatique',
-                'image_path' => 'images/etudiant/tanael.jpg',
+                'image_path' => 'images/etudiant/tanael.webp',
                 'quote_fr' => "L'ISSTM m'a donné les outils pour transformer mes idées en projets concrets. Les enseignants sont de vrais mentors.",
                 'quote_en' => 'ISSTM gave me the tools to turn my ideas into concrete projects. The teachers are true mentors.',
                 'quote_mg' => 'Ny ISSTM no nanome ahy fitaovana hamadihana ny hevitro ho tetikasa mivaingana. Tena mpanoro hevitra ny mpampianatra.',
@@ -1601,7 +1601,7 @@ class HomeContentSeeder extends Seeder
             [
                 'author_name' => 'Mirindra Ramanana',
                 'program' => 'Génie Informatique',
-                'image_path' => 'images/etudiant/mirindra.jpeg',
+                'image_path' => 'images/etudiant/mirindra.webp',
                 'quote_fr' => "La formation pratique et les stages en entreprise m'ont permis d'être opérationnelle dès la sortie de l'école.",
                 'quote_en' => 'The practical training and internships allowed me to be operational right out of school.',
                 'quote_mg' => "Ny fiofanana azo ampiharina sy ny fianarana asa tany amin'ny orinasa no nahatonga ahy ho afaka niasa avy hatrany rehefa nivoaka ny sekoly.",
@@ -1610,7 +1610,7 @@ class HomeContentSeeder extends Seeder
             [
                 'author_name' => 'Safidy Thierry',
                 'program' => 'Génie Civil',
-                'image_path' => 'images/etudiant/safidy1-visage.jpg',
+                'image_path' => 'images/etudiant/safidy1-visage.webp',
                 'quote_fr' => "J'ai pu développer ma créativité et ma rigueur technique grâce à des projets stimulants et un encadrement de qualité.",
                 'quote_en' => 'I was able to develop my creativity and technical rigor thanks to stimulating projects and quality supervision.',
                 'quote_mg' => 'Afaka nampivelatra ny fahaizako mamorona sy ny fahaizako ara-teknika aho noho ny tetikasa mandrisika sy ny fanaraha-maso kalitao.',
@@ -1619,7 +1619,7 @@ class HomeContentSeeder extends Seeder
             [
                 'author_name' => 'Heather Jameelah',
                 'program' => 'Génie Biomédical',
-                'image_path' => 'images/etudiant/jameelah.jpg',
+                'image_path' => 'images/etudiant/jameelah.webp',
                 'quote_fr' => "L'ambiance d'entraide et la richesse des cours m'ont poussée à me dépasser. C'est plus qu'une école, c'est une famille.",
                 'quote_en' => "The atmosphere of mutual support and the richness of the courses pushed me to surpass myself. It's more than a school, it's a family.",
                 'quote_mg' => "Ny rivo-piainana mifampitsimbina sy ny harenan'ny fampianarana no nanosika ahy hihoatra ny tenako. Mihoatra ny sekoly izy io, fianakaviana.",
@@ -1814,7 +1814,7 @@ class HomeContentSeeder extends Seeder
                 'avantages_fr' => "Un secteur en croissance constante, avec une forte demande de compétences dans presque tous les pays\nDes débouchés variés : développement logiciel, cybersécurité, intelligence artificielle, gestion de bases de données, administration réseau\nUne formation qui développe la logique, la rigueur et la capacité à résoudre des problèmes complexes\nDes outils et technologies universels, transférables dans quasiment tous les secteurs d'activité\nLa possibilité de travailler à distance ou de créer sa propre entreprise",
                 'avantages_en' => "A constantly growing sector, with a high demand for skills in almost all countries\nVarious opportunities: software development, cybersecurity, artificial intelligence, database management, network administration\nTraining that develops logic, rigor and the ability to solve complex problems",
                 'avantages_mg' => "Ny fitomboan'ny sehatra tsy mitsaha-mitombo, miaraka amin'ny tinady goavana ho an'ny fahaiza-manao any amin'ny ankamaroan'ny firenena rehetra\nFanofanana izay mampivelatra lojika, henjana ary ny fahafahana hamaha olana sarotra",
-                'image_path' => 'images/filieres/genie-informatique.jpg', 'display_order' => 1,
+                'image_path' => 'images/filieres/genie-informatique.webp', 'display_order' => 1,
             ],
             [
                 'code' => 'GB', 'mention' => 'STNPA', 'niveaux' => 'L1,L2', 'slug' => 'genie-biomedical',
@@ -1831,7 +1831,7 @@ class HomeContentSeeder extends Seeder
                 'avantages_fr' => "Un secteur porteur de sens, directement utile à la santé et au bien-être des populations\nUne forte demande d'ingénieurs biomédicaux dans les hôpitaux, cliniques et industries pharmaceutiques\nUne formation pluridisciplinaire (électronique, informatique, biologie, mécanique)",
                 'avantages_en' => 'A meaningful sector, directly useful for the health and well-being of populations. Strong demand for biomedical engineers in hospitals, clinics and pharmaceutical industries.',
                 'avantages_mg' => "Sehatra manan-danja, ilaina mivantana ho an'ny fahasalamana sy ny fahasalaman'ny mponina",
-                'image_path' => 'images/filieres/genie-biomedical.jpg', 'display_order' => 2,
+                'image_path' => 'images/filieres/genie-biomedical.webp', 'display_order' => 2,
             ],
             [
                 'code' => 'GEI', 'mention' => 'STNPA', 'niveaux' => 'L1,L2,L3', 'slug' => 'genie-electronique-informatique',
@@ -1848,7 +1848,7 @@ class HomeContentSeeder extends Seeder
                 'avantages_fr' => "Une double compétence matériel + logiciel très recherchée par les employeurs\nDes applications dans des secteurs variés : télécommunications, automobile, aéronautique, électroménager",
                 'avantages_en' => 'Dual hardware + software skills highly sought after by employers. Applications in various sectors: telecommunications, automotive, aeronautics.',
                 'avantages_mg' => 'Dual hardware + rindrambaiko fahaiza-manao tena nitady taorian\'ny mpampiasa',
-                'image_path' => 'images/filieres/genie-electronique-informatique.jpg', 'display_order' => 3,
+                'image_path' => 'images/filieres/genie-electronique-informatique.webp', 'display_order' => 3,
             ],
             [
                 'code' => 'GE', 'mention' => 'STI', 'niveaux' => 'L1,L2,L3', 'slug' => 'genie-electrique',
@@ -1865,7 +1865,7 @@ class HomeContentSeeder extends Seeder
                 'avantages_fr' => "Une filière indispensable : l'électricité reste au cœur de toutes les infrastructures modernes\nDes débouchés stables dans la production, le transport et la distribution d'énergie",
                 'avantages_en' => null,
                 'avantages_mg' => 'Sehatra iray tena ilaina: ny herinaratra dia mitoetra ao anatin\'ny fon\'ny fotodrafitrasa maoderina rehetra',
-                'image_path' => 'images/filieres/genie-electrique.jpg', 'display_order' => 4,
+                'image_path' => 'images/filieres/genie-electrique.webp', 'display_order' => 4,
             ],
             [
                 'code' => 'GCIVIL', 'mention' => 'STGC', 'niveaux' => 'L1,L2,L3,M1,M2', 'slug' => 'genie-civil',
@@ -1882,7 +1882,7 @@ class HomeContentSeeder extends Seeder
                 'avantages_fr' => "Une filière historique et toujours indispensable : bâtir les infrastructures de demain\nDes débouchés stables dans le BTP, secteur porteur d'emplois dans de nombreux pays",
                 'avantages_en' => null,
                 'avantages_mg' => null,
-                'image_path' => 'images/filieres/genie-civil.jpg', 'display_order' => 5,
+                'image_path' => 'images/filieres/genie-civil.webp', 'display_order' => 5,
             ],
             [
                 'code' => 'GIND', 'mention' => 'STI', 'niveaux' => 'L1,L2,L3,M1,M2', 'slug' => 'genie-industriel',
@@ -1893,7 +1893,7 @@ class HomeContentSeeder extends Seeder
                 'debouches_fr' => "Ingénieur qualité\nResponsable de production\nIngénieur logistique / supply chain\nConsultant en amélioration continue (Lean/Six Sigma)\nIngénieur méthodes et process", 'debouches_en' => null, 'debouches_mg' => null,
                 'historique_fr' => "Le génie industriel s'est développé au début du XXe siècle avec les travaux de Frederick Taylor et Henry Ford sur l'organisation scientifique du travail et la production en série. La discipline a ensuite intégré les méthodes de gestion de la qualité (Toyota, Lean management) à partir des années 1950-1980, pour devenir une filière axée sur l'optimisation globale des systèmes de production, alliant ingénierie technique, gestion et logistique.", 'historique_en' => null, 'historique_mg' => null,
                 'avantages_fr' => "Une formation transversale, à la croisée de la technique, de la gestion et de la logistique\nDes compétences recherchées dans toutes les industries manufacturières\nDes débouchés dans l'optimisation des processus, la qualité et la supply chain\nUne vision globale des systèmes de production, utile pour évoluer vers des postes de direction\nUne discipline qui valorise à la fois la rigueur analytique et le sens de l'organisation", 'avantages_en' => null, 'avantages_mg' => null,
-                'image_path' => 'images/filieres/genie-industriel.jpg', 'display_order' => 6,
+                'image_path' => 'images/filieres/genie-industriel.webp', 'display_order' => 6,
             ],
             [
                 'code' => 'GT', 'mention' => 'STI', 'niveaux' => 'M1,M2', 'slug' => 'genie-thermique',
@@ -1904,7 +1904,7 @@ class HomeContentSeeder extends Seeder
                 'debouches_fr' => "Ingénieur en climatisation et ventilation (CVC)\nIngénieur efficacité énergétique\nTechnicien supérieur en installations thermiques\nChargé d'études thermiques du bâtiment\nIngénieur en procédés industriels thermiques", 'debouches_en' => null, 'debouches_mg' => null,
                 'historique_fr' => "Le génie thermique s'appuie sur les principes de la thermodynamique établis au XIXe siècle par des scientifiques comme Carnot, Clausius et Kelvin. Il s'est développé comme discipline d'ingénierie appliquée avec l'essor des machines thermiques, des systèmes de chauffage, de ventilation et de climatisation (CVC) au cours du XXe siècle, et connaît aujourd'hui un regain d'intérêt avec les enjeux d'efficacité énergétique et de transition écologique.", 'historique_en' => null, 'historique_mg' => null,
                 'avantages_fr' => "Une expertise essentielle pour le confort thermique des bâtiments et des industries\nDes débouchés croissants liés à la transition énergétique et aux économies d'énergie\nDes applications variées : climatisation, chauffage, réfrigération, procédés industriels\nUne formation technique solide en thermodynamique et en mécanique des fluides\nUne discipline de plus en plus valorisée face aux enjeux climatiques actuels", 'avantages_en' => null, 'avantages_mg' => null,
-                'image_path' => 'images/filieres/genie-thermique.jpg', 'display_order' => 7,
+                'image_path' => 'images/filieres/genie-thermique.webp', 'display_order' => 7,
             ],
             [
                 'code' => 'GHYD', 'mention' => 'STGC', 'niveaux' => 'L1,L2,L3', 'slug' => 'genie-hydraulique',
@@ -1915,7 +1915,7 @@ class HomeContentSeeder extends Seeder
                 'debouches_fr' => "Ingénieur hydraulicien\nIngénieur en gestion des ressources en eau\nIngénieur en assainissement\nChargé d'études en irrigation\nTechnicien supérieur en réseaux hydrauliques", 'debouches_en' => "Hydraulic engineer\nWater resources management engineer\nSanitation engineer\nIrrigation study manager\nSenior technician in hydraulic networks", 'debouches_mg' => null,
                 'historique_fr' => "L'hydraulique compte parmi les plus anciennes sciences de l'ingénieur, illustrée par les systèmes d'irrigation et d'adduction d'eau de l'Antiquité (Égypte, Mésopotamie, Empire romain). Elle s'est formalisée scientifiquement à partir du XVIIIe siècle avec les travaux de Bernoulli et d'autres pionniers de la mécanique des fluides, avant de devenir une filière d'ingénierie moderne appliquée à la gestion de l'eau, à l'irrigation, à l'assainissement et aux barrages hydroélectriques.", 'historique_en' => 'Hydraulics is one of the oldest engineering sciences, illustrated by the irrigation and water supply systems of Antiquity (Egypt, Mesopotamia, Roman Empire). It became scientifically formalized from the 18th century with the work of Bernoulli and other pioneers in fluid mechanics, before becoming a modern engineering sector applied to water management, irrigation, sanitation and hydroelectric dams.', 'historique_mg' => null,
                 'avantages_fr' => "Une expertise cruciale pour la gestion durable des ressources en eau\nDes débouchés dans l'irrigation, l'assainissement, l'approvisionnement en eau potable\nDes opportunités dans les grands projets d'infrastructure (barrages, réseaux hydrauliques)\nUne discipline stratégique face aux enjeux climatiques et à la raréfaction de l'eau\nUne formation qui combine mécanique des fluides, génie civil et environnement", 'avantages_en' => 'Crucial expertise for the sustainable management of water resources\nOpportunities in irrigation, sanitation, drinking water supply\nOpportunities in large infrastructure projects (dams, hydraulic networks)\nA strategic discipline in the face of climate issues and water scarcity\nTraining that combines fluid mechanics, civil engineering and the environment', 'avantages_mg' => null,
-                'image_path' => 'images/filieres/genie-hydraulique.jpg', 'display_order' => 8,
+                'image_path' => 'images/filieres/genie-hydraulique.webp', 'display_order' => 8,
             ],
             [
                 'code' => 'GARCHI', 'mention' => 'STGC', 'niveaux' => 'L1,L2,L3', 'slug' => 'genie-architecture',
@@ -1926,7 +1926,7 @@ class HomeContentSeeder extends Seeder
                 'debouches_fr' => "Architecte / Ingénieur architecte\nDessinateur-projeteur en bâtiment\nChef de projet en conception architecturale\nUrbaniste\nConsultant en construction durable", 'debouches_en' => null, 'debouches_mg' => null,
                 'historique_fr' => "L'architecture est l'une des disciplines les plus anciennes de l'humanité, présente depuis les premières civilisations à travers la conception d'habitats et de monuments. Le génie architectural moderne, qui associe la créativité de l'architecture aux exigences techniques de l'ingénierie (structures, matériaux, réglementation), s'est développé au cours du XXe siècle avec l'essor de l'urbanisation et des nouvelles techniques de construction, intégrant aujourd'hui les enjeux de durabilité et de conception assistée par ordinateur.", 'historique_en' => null, 'historique_mg' => null,
                 'avantages_fr' => "Une filière qui allie créativité artistique et rigueur technique\nDes débouchés dans la conception de bâtiments résidentiels, publics et industriels\nDes opportunités croissantes autour de l'architecture durable et écologique\nUne formation qui développe la vision spatiale, le dessin technique et la gestion de projet\nUne discipline valorisante, avec un impact concret et visible sur le cadre de vie", 'avantages_en' => null, 'avantages_mg' => null,
-                'image_path' => 'images/filieres/genie-architecture.jpg', 'display_order' => 9,
+                'image_path' => 'images/filieres/genie-architecture.webp', 'display_order' => 9,
             ],
             [
                 'code' => 'FE', 'mention' => 'STI', 'niveaux' => 'L1,L2,L3', 'slug' => 'froid-energie',
@@ -1937,7 +1937,7 @@ class HomeContentSeeder extends Seeder
                 'debouches_fr' => "Ingénieur frigoriste\nIngénieur en efficacité énergétique\nTechnicien supérieur en froid industriel\nResponsable maintenance énergétique\nChargé d'études en systèmes frigorifiques", 'debouches_en' => null, 'debouches_mg' => null,
                 'historique_fr' => "Les techniques du froid se sont développées à partir du XIXe siècle avec l'invention des premières machines frigorifiques, permettant la conservation des denrées alimentaires à grande échelle. Associée aux enjeux énergétiques modernes, cette filière a évolué pour englober la production, la distribution et l'optimisation de l'énergie, en particulier dans un contexte de transition énergétique et de recherche d'efficacité, devenant une discipline stratégique pour l'industrie agroalimentaire et le bâtiment.", 'historique_en' => null, 'historique_mg' => null,
                 'avantages_fr' => "Une expertise recherchée dans l'agroalimentaire, la logistique et la conservation des denrées\nDes débouchés liés aux enjeux actuels d'efficacité énergétique\nDes applications variées : réfrigération industrielle, climatisation, production d'énergie\nUne formation technique alliant thermodynamique, électrotechnique et mécanique\nUn secteur stratégique pour la sécurité alimentaire et la transition énergétique", 'avantages_en' => null, 'avantages_mg' => null,
-                'image_path' => 'images/filieres/froid-energie.jpg', 'display_order' => 10,
+                'image_path' => 'images/filieres/froid-energie.webp', 'display_order' => 10,
             ],
             [
                 'code' => 'EII', 'mention' => 'STNPA', 'niveaux' => 'M1,M2', 'slug' => 'electronique-informatique-industrielle',
@@ -1948,7 +1948,7 @@ class HomeContentSeeder extends Seeder
                 'debouches_fr' => "Ingénieur automaticien\nIngénieur en informatique industrielle\nTechnicien supérieur en maintenance industrielle\nIngénieur en robotique industrielle\nIntégrateur de systèmes automatisés", 'debouches_en' => null, 'debouches_mg' => null,
                 'historique_fr' => "Cette filière est née de la convergence entre l'électronique, l'informatique et l'automatisation industrielle, un mouvement amorcé dans les années 1970-1980 avec l'apparition des automates programmables. Elle a pris une importance croissante avec la robotisation des usines et, plus récemment, avec l'avènement de l'industrie 4.0, qui connecte capteurs, machines et systèmes informatiques pour automatiser et optimiser les processus de production.", 'historique_en' => null, 'historique_mg' => null,
                 'avantages_fr' => "Une filière au cœur de la modernisation industrielle (automatisation, robotique)\nDes débouchés dans la conception et la maintenance de systèmes automatisés\nUne double compétence électronique + informatique très recherchée en industrie\nDes opportunités croissantes avec l'essor de l'industrie 4.0 et de la robotique\nUne formation technique complète, adaptée aux besoins des usines modernes", 'avantages_en' => null, 'avantages_mg' => null,
-                'image_path' => 'images/filieres/electronique-informatique-industrielle.png', 'display_order' => 11,
+                'image_path' => 'images/filieres/electronique-informatique-industrielle.webp', 'display_order' => 11,
             ],
             [
                 'code' => 'TR', 'mention' => 'STNPA', 'niveaux' => 'M1,M2', 'slug' => 'telecommunications-reseaux',
@@ -1959,7 +1959,7 @@ class HomeContentSeeder extends Seeder
                 'debouches_fr' => "Ingénieur réseaux et télécommunications\nAdministrateur systèmes et réseaux\nIngénieur en sécurité des réseaux\nTechnicien supérieur en télécommunications\nConsultant en infrastructures réseau", 'debouches_en' => null, 'debouches_mg' => null,
                 'historique_fr' => "Les télécommunications ont débuté avec l'invention du télégraphe électrique au XIXe siècle, suivie du téléphone, puis de la radio et de la télévision au XXe siècle. La discipline a connu une révolution majeure avec l'apparition d'Internet dans les années 1990 et le développement des réseaux mobiles (2G à 5G), transformant les télécommunications en une filière technologique centrale de la société connectée d'aujourd'hui.", 'historique_en' => null, 'historique_mg' => null,
                 'avantages_fr' => "Un secteur stratégique, indispensable à la connectivité mondiale\nDes débouchés dans les opérateurs télécoms, les entreprises et les administrations\nDes opportunités croissantes avec le déploiement de la fibre optique et de la 5G\nUne formation technique solide en réseaux, transmission de données et sécurité\nUn secteur en perpétuelle évolution technologique, stimulant pour les esprits curieux", 'avantages_en' => null, 'avantages_mg' => null,
-                'image_path' => 'images/filieres/telecommunications-reseaux.jpg', 'display_order' => 12,
+                'image_path' => 'images/filieres/telecommunications-reseaux.webp', 'display_order' => 12,
             ],
             [
                 'code' => 'GL', 'mention' => 'STNPA', 'niveaux' => 'M1,M2', 'slug' => 'genie-logiciel',
@@ -1970,7 +1970,7 @@ class HomeContentSeeder extends Seeder
                 'debouches_fr' => "Développeur / Développeuse d'applications\nIngénieur logiciel\nChef de projet informatique\nArchitecte logiciel\nTesteur / Ingénieur qualité logicielle", 'debouches_en' => null, 'debouches_mg' => null,
                 'historique_fr' => "Le génie logiciel est né dans les années 1960-1970 en réponse à la fameuse « crise du logiciel », lorsque la complexité croissante des programmes a révélé le besoin de méthodes rigoureuses de conception, de test et de gestion de projet informatique. Depuis, la discipline n'a cessé d'évoluer avec l'apparition de nouvelles méthodologies (agile, DevOps) et de nouveaux paradigmes de programmation, structurant aujourd'hui l'ensemble de l'industrie du logiciel.", 'historique_en' => null, 'historique_mg' => null,
                 'avantages_fr' => "Une filière au cœur de la transformation numérique de tous les secteurs\nDes débouchés très nombreux : applications web, mobiles, systèmes d'entreprise\nUne formation qui développe la pensée logique et la gestion de projet\nDes méthodologies modernes (agile, DevOps) qui valorisent le travail en équipe\nUne profession offrant de nombreuses possibilités d'évolution ou d'entrepreneuriat", 'avantages_en' => null, 'avantages_mg' => null,
-                'image_path' => 'images/filieres/genie-logiciel.jpg', 'display_order' => 13,
+                'image_path' => 'images/filieres/genie-logiciel.webp', 'display_order' => 13,
             ],
             [
                 'code' => 'ISEA', 'mention' => 'STI', 'niveaux' => 'M1,M2', 'slug' => 'ingenierie-systemes-electriques-automatises',
@@ -1981,7 +1981,7 @@ class HomeContentSeeder extends Seeder
                 'debouches_fr' => "Ingénieur en systèmes automatisés\nIngénieur électrotechnicien\nTechnicien supérieur en automatisme industriel\nResponsable maintenance industrielle\nIngénieur en électronique de puissance", 'debouches_en' => null, 'debouches_mg' => null,
                 'historique_fr' => "Cette filière combine l'histoire du génie électrique et celle de l'automatisation industrielle, deux disciplines qui ont convergé au cours du XXe siècle avec l'introduction des automates programmables et des systèmes de contrôle-commande. Elle s'est développée pour répondre aux besoins croissants d'automatisation des processus industriels, alliant électrotechnique, électronique de puissance et informatique industrielle.", 'historique_en' => null, 'historique_mg' => null,
                 'avantages_fr' => "Une expertise très recherchée dans l'industrie moderne et l'automatisation\nDes débouchés dans la conception, l'installation et la maintenance de systèmes automatisés\nUne formation pluridisciplinaire : électrotechnique, automatisme, informatique industrielle\nDes opportunités croissantes avec la modernisation des infrastructures industrielles\nUne discipline stratégique pour la compétitivité industrielle", 'avantages_en' => null, 'avantages_mg' => null,
-                'image_path' => 'images/filieres/ingenierie-systemes-electriques-automatises.jpg', 'display_order' => 14,
+                'image_path' => 'images/filieres/ingenierie-systemes-electriques-automatises.webp', 'display_order' => 14,
             ],
         ];
 

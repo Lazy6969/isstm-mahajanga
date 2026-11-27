@@ -54,7 +54,7 @@ export default function CookieConsentBanner() {
     }
 
     return (
-        <div className="pointer-events-none fixed inset-x-0 top-0 z-[90] px-3 pt-[calc(env(safe-area-inset-top,0px)+0.75rem)]">
+        <div className="pointer-events-none fixed inset-x-0 bottom-20 z-[90] px-3 pb-[calc(env(safe-area-inset-bottom,0px)+0.75rem)] lg:bottom-4">
             <div className="pointer-events-auto mx-auto flex max-w-3xl flex-col items-center gap-3 rounded-2xl bg-isstm-navy px-4 py-3 text-center shadow-xl sm:flex-row sm:text-left">
                 <p className="flex-1 text-sm text-white/90">
                     {t(

@@ -4,7 +4,7 @@ import { imageStyleToCss } from '../../lib/imageStyle';
 
 // Shown behind every page banner until an admin uploads a photo of their own
 // for that specific banner via the pencil.
-const DEFAULT_BANNER = 'images/vision.jpg';
+const DEFAULT_BANNER = 'images/vision.webp';
 
 /**
  * Photo behind a page's navy title banner — defaults to DEFAULT_BANNER, and

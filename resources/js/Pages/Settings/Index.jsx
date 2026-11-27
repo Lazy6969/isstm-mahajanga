@@ -50,7 +50,7 @@ export default function Index() {
             </Link>
             <Card className="flex items-center gap-4 p-5">
                 <img
-                    src={user?.avatar_path ? `/storage/${user.avatar_path}` : '/images/logo-isstm.jpg'}
+                    src={user?.avatar_path ? `/storage/${user.avatar_path}` : '/images/logo-isstm.webp'}
                     alt=""
                     className="h-16 w-16 flex-shrink-0 rounded-full object-cover ring-2 ring-community-accent"
                 />

@@ -99,21 +99,21 @@ export default function VieEtudiante({ content = {} }) {
     const { contentStyles } = usePage().props;
 
     const campusSlides = [
-        { key: 'vie_etudiante_campus_slide1_image_path', value: content.vie_etudiante_campus_slide1_image_path ?? 'images/portal_campus_1.jpg' },
-        { key: 'vie_etudiante_campus_slide2_image_path', value: content.vie_etudiante_campus_slide2_image_path ?? 'images/portal_campus_2.jpg' },
-        { key: 'vie_etudiante_campus_slide3_image_path', value: content.vie_etudiante_campus_slide3_image_path ?? 'images/portal_campus_3.jpg' },
+        { key: 'vie_etudiante_campus_slide1_image_path', value: content.vie_etudiante_campus_slide1_image_path ?? 'images/portal_campus_1.webp' },
+        { key: 'vie_etudiante_campus_slide2_image_path', value: content.vie_etudiante_campus_slide2_image_path ?? 'images/portal_campus_2.webp' },
+        { key: 'vie_etudiante_campus_slide3_image_path', value: content.vie_etudiante_campus_slide3_image_path ?? 'images/portal_campus_3.webp' },
     ];
 
     const assocSlides = [
-        { key: 'vie_etudiante_assoc_slide1_image_path', value: content.vie_etudiante_assoc_slide1_image_path ?? 'images/portal_assoc_4.jpg' },
-        { key: 'vie_etudiante_assoc_slide2_image_path', value: content.vie_etudiante_assoc_slide2_image_path ?? 'images/portal_assoc_5.jpg' },
-        { key: 'vie_etudiante_assoc_slide3_image_path', value: content.vie_etudiante_assoc_slide3_image_path ?? 'images/portal_assoc_6.jpg' },
+        { key: 'vie_etudiante_assoc_slide1_image_path', value: content.vie_etudiante_assoc_slide1_image_path ?? 'images/portal_assoc_4.webp' },
+        { key: 'vie_etudiante_assoc_slide2_image_path', value: content.vie_etudiante_assoc_slide2_image_path ?? 'images/portal_assoc_5.webp' },
+        { key: 'vie_etudiante_assoc_slide3_image_path', value: content.vie_etudiante_assoc_slide3_image_path ?? 'images/portal_assoc_6.webp' },
     ];
 
-    const intro1Image = content.vie_etudiante_intro1_image_path ?? 'images/campus/etudiant1.png';
-    const intro2Image = content.vie_etudiante_intro2_image_path ?? 'images/campus/etudiant2.png';
-    const campusLogo = content.vie_etudiante_campus_logo_image_path ?? 'images/umg.jpg';
-    const assocLogo = content.vie_etudiante_assoc_logo_image_path ?? 'images/aei.jpeg';
+    const intro1Image = content.vie_etudiante_intro1_image_path ?? 'images/campus/etudiant1.webp';
+    const intro2Image = content.vie_etudiante_intro2_image_path ?? 'images/campus/etudiant2.webp';
+    const campusLogo = content.vie_etudiante_campus_logo_image_path ?? 'images/umg.webp';
+    const assocLogo = content.vie_etudiante_assoc_logo_image_path ?? 'images/aei.webp';
 
     return (
         <div className="min-h-screen bg-slate-50 dark:bg-slate-900">

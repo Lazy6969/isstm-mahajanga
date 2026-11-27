@@ -36,7 +36,7 @@ export default function Hero({ slides, sparkleColor }) {
     // transition to run, just like every later slide already gets when it
     // becomes active.
     const [zoomReady, setZoomReady] = useState(false);
-    const safeSlides = slides.length > 0 ? slides : [{ image_path: 'images/slide1.jpg', media_type: 'image' }];
+    const safeSlides = slides.length > 0 ? slides : [{ image_path: 'images/slide1.webp', media_type: 'image' }];
     const timerRef = useRef(null);
     const videoRefs = useRef({});
 

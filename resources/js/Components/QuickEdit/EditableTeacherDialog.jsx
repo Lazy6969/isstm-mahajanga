@@ -70,7 +70,7 @@ export default function EditableTeacherDialog({ open, onClose, teacher }) {
                 </DialogHeader>
                 <form onSubmit={submit} className="space-y-4">
                     <img
-                        src={preview ?? (teacher.photo_path ? `/${teacher.photo_path}` : '/images/logo-isstm.jpg')}
+                        src={preview ?? (teacher.photo_path ? `/${teacher.photo_path}` : '/images/logo-isstm.webp')}
                         alt=""
                         className="h-24 w-24 rounded-full border border-admin-border object-cover"
                     />

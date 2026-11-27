@@ -5,7 +5,7 @@ import EditableText from '../QuickEdit/EditableText';
 import LetterRevealText from '../Rejoindre/LetterRevealText';
 import { useTranslations } from '../../lib/useTranslations';
 
-const COVER_PATH = '/images/hymne-isstm-cover.jpg';
+const COVER_PATH = '/images/hymne-isstm-cover.webp';
 const AUDIO_PATH = '/audio/hymne-isstm.mp3';
 const SEEK_STEP_SECONDS = 5;
 

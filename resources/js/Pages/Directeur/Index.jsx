@@ -12,7 +12,7 @@ import BannerBackground from '../../Components/QuickEdit/BannerBackground';
 export default function Index({ content }) {
     const { t } = useTranslations();
     const { contentStyles } = usePage().props;
-    const directeurImage = content.directeur_image_path ?? 'images/directeur.jpg';
+    const directeurImage = content.directeur_image_path ?? 'images/directeur.webp';
 
     return (
         <div className="min-h-screen bg-slate-50 dark:bg-slate-900">

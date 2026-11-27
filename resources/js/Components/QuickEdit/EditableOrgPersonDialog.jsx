@@ -47,7 +47,7 @@ export default function EditableOrgPersonDialog({ open, onClose, person, title }
                 </DialogHeader>
                 <form onSubmit={submit} className="space-y-4">
                     <img
-                        src={preview ?? (person.photo_path ? `/${person.photo_path}` : '/images/logo-isstm.jpg')}
+                        src={preview ?? (person.photo_path ? `/${person.photo_path}` : '/images/logo-isstm.webp')}
                         alt=""
                         className="h-24 w-24 rounded-full border border-admin-border object-cover"
                     />

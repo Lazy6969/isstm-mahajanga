@@ -483,7 +483,7 @@ export default function Index({ content, dossierPreinscription }) {
 
                     <div className="relative mt-3 inline-block">
                         <img
-                            src={`/${content.inscription_bred_logo ?? 'images/partenariat/bre.jpg'}`}
+                            src={`/${content.inscription_bred_logo ?? 'images/partenariat/bre.webp'}`}
                             alt="BRED"
                             className="h-10 w-auto object-contain"
                             style={imageStyleToCss(contentStyles?.inscription_bred_logo)}

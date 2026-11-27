@@ -552,7 +552,7 @@ export default function Documents({ category, documents, canModerate, filieres, 
     const [showAllApproved, setShowAllApproved] = useState(false);
 
     const categoryLabel = category === 'lecon' ? t('communaute.lecons_court', 'Leçons') : t('communaute.sujets_court', 'Sujets');
-    const bannerImage = category === 'lecon' ? '/images/lecons-sujets-banner-lecons.jpg' : '/images/lecons-sujets-banner-sujets.jpg';
+    const bannerImage = category === 'lecon' ? '/images/lecons-sujets-banner-lecons.webp' : '/images/lecons-sujets-banner-sujets.webp';
     const bannerSubtitle =
         category === 'lecon'
             ? t('lecons_sujets.banniere_lecons', 'Les supports de cours partagés par les étudiants et enseignants, validés par l’administration.')

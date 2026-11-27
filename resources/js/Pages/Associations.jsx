@@ -120,9 +120,9 @@ const bureauFondateur = [
 ];
 
 const gallery = [
-    { key: 'associations_galerie_1', image: 'images/portal_assoc_4.jpg' },
-    { key: 'associations_galerie_2', image: 'images/portal_assoc_5.jpg' },
-    { key: 'associations_galerie_3', image: 'images/portal_assoc_6.jpg' },
+    { key: 'associations_galerie_1', image: 'images/portal_assoc_4.webp' },
+    { key: 'associations_galerie_2', image: 'images/portal_assoc_5.webp' },
+    { key: 'associations_galerie_3', image: 'images/portal_assoc_6.webp' },
 ];
 
 export default function Associations() {
@@ -171,7 +171,7 @@ export default function Associations() {
                 <div className="relative flex justify-center">
                     <Avatar className="h-20 w-20 ring-4 ring-isstm-gold/30">
                         <AvatarImage
-                            src={`/${content.associations_logo ?? 'images/aei.jpeg'}`}
+                            src={`/${content.associations_logo ?? 'images/aei.webp'}`}
                             alt="Logo AEI"
                             style={imageStyleToCss(contentStyles?.associations_logo)}
                         />
@@ -179,7 +179,7 @@ export default function Associations() {
                     </Avatar>
                     <EditableImage
                         contentKey="associations_logo"
-                        value={content.associations_logo ?? 'images/aei.jpeg'}
+                        value={content.associations_logo ?? 'images/aei.webp'}
                         className="absolute right-[calc(50%-2.5rem)] top-0 z-10"
                     />
                 </div>

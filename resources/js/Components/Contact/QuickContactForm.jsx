@@ -58,7 +58,7 @@ export default function QuickContactForm({ content }) {
                 style={{ aspectRatio: '650 / 991' }}
             >
                 <img
-                    src="/images/robot-formulaire.png"
+                    src="/images/robot-formulaire.webp"
                     alt=""
                     aria-hidden="true"
                     className="absolute inset-0 h-full w-full object-cover"

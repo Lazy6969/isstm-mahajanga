@@ -14,37 +14,37 @@ import { useTranslations } from '../../lib/useTranslations';
 const SLIDES = [
     {
         imageKey: 'bibliotheque_slide1_image_path',
-        defaultImage: 'images/bibliotheque/slide1.jpg',
+        defaultImage: 'images/bibliotheque/slide1.webp',
         captionKey: 'bibliotheque_slide1_texte',
         defaultCaption: "Bibliothèque numérique de l'ISSTM, en partenariat avec Peace Corps Madagascar — inaugurée le 10 avril 2024.",
     },
     {
         imageKey: 'bibliotheque_slide2_image_path',
-        defaultImage: 'images/bibliotheque/slide2.jpg',
+        defaultImage: 'images/bibliotheque/slide2.webp',
         captionKey: 'bibliotheque_slide2_texte',
         defaultCaption: "Les mentions de l'ISSTM : Génies Civils, Technologies Industrielles, et Sciences et Techniques du Numérique et Physiques Appliquées.",
     },
     {
         imageKey: 'bibliotheque_slide3_image_path',
-        defaultImage: 'images/bibliotheque/slide3.jpg',
+        defaultImage: 'images/bibliotheque/slide3.webp',
         captionKey: 'bibliotheque_slide3_texte',
         defaultCaption: "La bibliothèque numérique s'étend aussi à l'École des Langues et Civilisations Internationales (ELCI).",
     },
     {
         imageKey: 'bibliotheque_slide4_image_path',
-        defaultImage: 'images/bibliotheque/slide4.jpg',
+        defaultImage: 'images/bibliotheque/slide4.webp',
         captionKey: 'bibliotheque_slide4_texte',
         defaultCaption: 'La salle informatique de la bibliothèque numérique, équipée pour la consultation en ligne.',
     },
     {
         imageKey: 'bibliotheque_slide5_image_path',
-        defaultImage: 'images/bibliotheque/slide5.jpg',
+        defaultImage: 'images/bibliotheque/slide5.webp',
         captionKey: 'bibliotheque_slide5_texte',
         defaultCaption: 'Inauguration officielle de la bibliothèque numérique, le 10 avril 2024.',
     },
     {
         imageKey: 'bibliotheque_slide6_image_path',
-        defaultImage: 'images/bibliotheque/slide6.jpg',
+        defaultImage: 'images/bibliotheque/slide6.webp',
         captionKey: 'bibliotheque_slide6_texte',
         defaultCaption: "Un espace de travail numérique au service des étudiants de l'ISSTM.",
     },
@@ -59,7 +59,7 @@ const SLIDES = [
 export default function Accueil() {
     const { t } = useTranslations();
     const { content, contentStyles } = usePage().props;
-    const introImage = content.bibliotheque_intro_image_path ?? 'images/campus/etudiant1.png';
+    const introImage = content.bibliotheque_intro_image_path ?? 'images/campus/etudiant1.webp';
 
     return (
         <div className="min-h-screen bg-slate-50 dark:bg-slate-900">

@@ -13,7 +13,7 @@ import { useTranslations } from '../lib/useTranslations';
 export default function Rejoindre() {
     const { content, contentStyles } = usePage().props;
     const { t } = useTranslations();
-    const heroImage = content?.rejoindre_hero_image_path ?? 'images/rejoindre-hero.jpg';
+    const heroImage = content?.rejoindre_hero_image_path ?? 'images/rejoindre-hero.webp';
     const accroche = content?.rejoindre_accroche ?? t('rejoindre.accroche', 'Votre avenir commence ici');
 
     const dateLimite = content?.inscription_date_limite

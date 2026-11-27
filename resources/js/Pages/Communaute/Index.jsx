@@ -65,7 +65,7 @@ export default function Index({ posts, canPublish, postTypes, friends, conversat
         <AppLayout fullWidth>
             <Head title="Communauté" />
 
-            {feedPreloaderMounted && <SitePreloader hidden={feedPreloaderHidden} logo="/images/isstmeet-logo.png" />}
+            {feedPreloaderMounted && <SitePreloader hidden={feedPreloaderHidden} logo="/images/isstmeet-logo.webp" />}
 
             <div className="relative mb-6 overflow-hidden rounded-3xl bg-gradient-to-br from-community-accent/15 via-isstm-gold/10 to-transparent p-6 dark:from-community-accent/20 dark:via-isstm-gold/10">
                 <div className="pointer-events-none absolute -right-10 -top-16 h-48 w-48 rounded-full bg-community-accent/20 blur-3xl dark:bg-community-accent/25" aria-hidden="true" />

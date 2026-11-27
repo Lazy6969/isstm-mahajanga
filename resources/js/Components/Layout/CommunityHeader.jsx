@@ -89,7 +89,7 @@ export default function CommunityHeader() {
                 <div className="flex flex-shrink-0 items-center gap-2">
                     <Link href="/communaute" aria-label="ISSTMeet" className="flex items-center gap-2.5">
                         <span className="community-logo-mark flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-white/95 p-1.5 shadow-sm transition-transform duration-300 hover:scale-110">
-                            <img src="/images/isstmeet-logo.png" alt="" className="h-full w-full object-contain" />
+                            <img src="/images/isstmeet-logo.webp" alt="" className="h-full w-full object-contain" />
                         </span>
                         <span className="h-6 w-px flex-shrink-0 bg-white/25" aria-hidden="true" />
                         <span className="relative inline-flex items-center text-sm font-extrabold tracking-tight sm:text-lg" aria-hidden="true">
@@ -154,7 +154,7 @@ export default function CommunityHeader() {
                     <SheetTitle className="sr-only">{t('nav.menu', 'Menu')}</SheetTitle>
                     <div className="flex items-center gap-2.5">
                         <span className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-xl bg-isstm-navy/5 p-1.5 dark:bg-white/10">
-                            <img src="/images/isstmeet-logo.png" alt="" className="h-full w-full object-contain" />
+                            <img src="/images/isstmeet-logo.webp" alt="" className="h-full w-full object-contain" />
                         </span>
                         <span className="h-5 w-px flex-shrink-0 bg-slate-200 dark:bg-slate-700" aria-hidden="true" />
                         <span className="relative inline-flex items-center text-base font-extrabold tracking-tight" aria-hidden="true">

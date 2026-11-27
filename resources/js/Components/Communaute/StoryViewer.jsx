@@ -172,7 +172,7 @@ export default function StoryViewer({ groups, groupIndex, storyIndex, onNavigate
             <div className="flex items-center justify-between px-4 py-3">
                 <div className="flex items-center gap-2.5">
                     <img
-                        src={group.user.avatar_path ? `/storage/${group.user.avatar_path}` : '/images/logo-isstm.jpg'}
+                        src={group.user.avatar_path ? `/storage/${group.user.avatar_path}` : '/images/logo-isstm.webp'}
                         alt=""
                         className="h-9 w-9 rounded-full object-cover ring-2 ring-white/40"
                     />

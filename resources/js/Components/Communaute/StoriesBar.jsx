@@ -79,7 +79,7 @@ export default function StoriesBar() {
                 className="relative h-44 w-28 flex-shrink-0 snap-start overflow-hidden rounded-2xl shadow-sm ring-1 ring-slate-100 transition disabled:opacity-50 dark:ring-slate-700"
             >
                 <img
-                    src={user?.avatar_path ? `/storage/${user.avatar_path}` : '/images/logo-isstm.jpg'}
+                    src={user?.avatar_path ? `/storage/${user.avatar_path}` : '/images/logo-isstm.webp'}
                     alt=""
                     className="h-2/3 w-full object-cover"
                 />
@@ -132,7 +132,7 @@ export default function StoriesBar() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0" />
                     <span className="absolute left-2 top-2">
                         <img
-                            src={group.user.avatar_path ? `/storage/${group.user.avatar_path}` : '/images/logo-isstm.jpg'}
+                            src={group.user.avatar_path ? `/storage/${group.user.avatar_path}` : '/images/logo-isstm.webp'}
                             alt=""
                             className="h-8 w-8 rounded-full object-cover ring-2 ring-community-accent"
                         />

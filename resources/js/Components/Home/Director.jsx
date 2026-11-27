@@ -452,7 +452,7 @@ export default function Director({ content }) {
     const d = {
         t,
         contentStyles,
-        image: content.directeur_image_path ?? 'images/directeur.jpg',
+        image: content.directeur_image_path ?? 'images/directeur.webp',
         titre: content.accueil_mot_directeur_titre,
         contenu: content.mot_directeur_contenu,
         nom: content.directeur_nom,

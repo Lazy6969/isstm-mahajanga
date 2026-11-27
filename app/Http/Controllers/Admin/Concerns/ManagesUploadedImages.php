@@ -11,7 +11,7 @@ use Illuminate\Support\Str;
  * storage/app/public/{folder}, referenced in the DB as "storage/{folder}/x.jpg"
  * — public pages already render every image_path-style column as a bare
  * `/${value}`, so this prefix is what makes an uploaded file resolve, while a
- * bundled asset like "images/x.jpg" is left alone (see also Admin\QuickEditController,
+ * bundled asset like "images/x.webp" is left alone (see also Admin\QuickEditController,
  * which uses the same convention for site_contents images).
  */
 trait ManagesUploadedImages
