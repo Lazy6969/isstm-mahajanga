@@ -32,6 +32,8 @@ export function notificationLink(notification) {
             return '/console/reactivations';
         case 'demande_reinitialisation':
             return '/console/securite';
+        case 'nouveau_contact':
+            return notification.contact_id ? `/console/emails/${notification.contact_id}` : '/console/emails';
         case 'fichier_a_valider':
             return notification.document_category ? `/communaute-fichiers/${notification.document_category}s` : '/communaute';
         default:

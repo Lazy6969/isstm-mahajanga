@@ -1,7 +1,11 @@
 <?php
 
+use App\Models\ContactMessage;
 use App\Models\SiteContent;
+use App\Models\User;
+use App\Notifications\NewContactMessage;
 use App\Notifications\QuickContactMessageReceived;
+use App\Role;
 use Illuminate\Support\Facades\Notification;
 
 it('e-mails the configured recipient and flashes a success message', function () {
@@ -62,9 +66,26 @@ it('requires an objet, a name, a first name, a valid e-mail and a message', func
     ])->assertInvalid(['email']);
 });
 
-it('fails gracefully when no recipient address is configured', function () {
-    SiteContent::where('content_key', 'contact_formulaire_email')->update(['content_value_fr' => '']);
+it('keeps the message in contact_messages so it can be read and replied to from the console', function () {
+    SiteContent::where('content_key', 'contact_formulaire_email')->update(['content_value_fr' => 'scolarite@isstm.test']);
+
+    $this->post('/contact/message-rapide', [
+        'objet' => 'Question sur les filières',
+        'nom' => 'Rakoto',
+        'prenoms' => 'Jean',
+        'email' => 'jean.rakoto@example.com',
+        'message' => "Bonjour, j'aimerais des informations.",
+    ])->assertSessionHas('status');
+
+    $contact = ContactMessage::where('email', 'jean.rakoto@example.com')->first();
+    expect($contact)->not->toBeNull();
+    expect($contact->objet)->toBe('Question sur les filières');
+    expect($contact->read_at)->toBeNull();
+});
+
+it('notifies every settings.manage admin of the new message', function () {
     Notification::fake();
+    $admin = User::factory()->role(Role::Admin)->create();
 
     $this->post('/contact/message-rapide', [
         'objet' => 'Question',
@@ -72,7 +93,21 @@ it('fails gracefully when no recipient address is configured', function () {
         'prenoms' => 'Jean',
         'email' => 'jean.rakoto@example.com',
         'message' => 'Bonjour.',
-    ])->assertSessionHas('error');
+    ])->assertSessionHas('status');
 
-    Notification::assertNothingSent();
+    Notification::assertSentTo($admin, NewContactMessage::class);
+});
+
+it('still stores the message and succeeds when no forwarding recipient is configured', function () {
+    SiteContent::where('content_key', 'contact_formulaire_email')->update(['content_value_fr' => '']);
+
+    $this->post('/contact/message-rapide', [
+        'objet' => 'Question',
+        'nom' => 'Rakoto',
+        'prenoms' => 'Jean',
+        'email' => 'jean.rakoto@example.com',
+        'message' => 'Bonjour.',
+    ])->assertSessionHas('status');
+
+    expect(ContactMessage::where('email', 'jean.rakoto@example.com')->exists())->toBeTrue();
 });

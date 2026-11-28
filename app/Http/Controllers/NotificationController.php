@@ -131,6 +131,7 @@ class NotificationController extends Controller
                 'document_id' => $notification->data['document_id'] ?? null,
                 'document_category' => $notification->data['document_category'] ?? null,
                 'document_title' => $notification->data['document_title'] ?? null,
+                'contact_id' => $notification->data['contact_id'] ?? null,
             ];
         });
     }

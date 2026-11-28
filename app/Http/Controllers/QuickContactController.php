@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ContactMessage;
 use App\Models\SiteContent;
+use App\Models\User;
+use App\Notifications\NewContactMessage;
 use App\Notifications\QuickContactMessageReceived;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -12,10 +15,12 @@ use Throwable;
 class QuickContactController extends Controller
 {
     /**
-     * The Contact page's "send a quick message" form — sends straight to
+     * The Contact page's "send a quick message" form — kept here
+     * (contact_messages) so a Super Admin can read and reply to it from
+     * Admin\EmailController, and also forwarded straight to
      * contact_formulaire_email (editable via the pencil next to the form,
-     * see ExternalPencil/EditLinkDialog) rather than opening the visitor's
-     * own mail client, unlike the mailto: cards above it.
+     * see ExternalPencil/EditLinkDialog) the same as before, so staff still
+     * gets it in their real inbox even if nobody opens the console.
      */
     public function store(Request $request): RedirectResponse
     {
@@ -28,10 +33,18 @@ class QuickContactController extends Controller
             'message' => ['required', 'string', 'max:2000'],
         ]);
 
+        $contact = ContactMessage::create($validated);
+
+        try {
+            Notification::send(User::permission('settings.manage')->get(), new NewContactMessage($contact));
+        } catch (Throwable $e) {
+            report($e);
+        }
+
         $recipient = SiteContent::where('content_key', 'contact_formulaire_email')->value('content_value_fr');
 
         if (! $recipient) {
-            return back()->with('error', __('contact.formulaire_erreur'));
+            return back()->with('status', __('contact.formulaire_succes'));
         }
 
         try {
@@ -45,8 +58,6 @@ class QuickContactController extends Controller
             ));
         } catch (Throwable $e) {
             report($e);
-
-            return back()->with('error', __('contact.formulaire_erreur'));
         }
 
         return back()->with('status', __('contact.formulaire_succes'));

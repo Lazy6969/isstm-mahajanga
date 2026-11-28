@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { router, useForm } from '@inertiajs/react';
-import { Mail, Save, Send } from 'lucide-react';
+import { Link, router, useForm } from '@inertiajs/react';
+import { ArrowLeft, Mail, Save, Send } from 'lucide-react';
 import AdminLayout from '../../../Components/Layout/AdminLayout';
 import { Label } from '../../../Components/ui/label';
 import { Input } from '../../../Components/ui/input';
@@ -61,7 +61,15 @@ export default function MailSettings({ settings }) {
         form.data.fromName !== settings.fromName;
 
     return (
-        <AdminLayout title={t('admin.auto.email_a1b2', 'E-mail')}>
+        <AdminLayout
+            title={t('admin.auto.email_a1b2', 'E-mail')}
+            actions={
+                <Link href="/console/emails" className="flex items-center gap-1.5 text-sm font-medium text-admin-text-secondary hover:text-admin-text">
+                    <ArrowLeft className="h-4 w-4" aria-hidden="true" />
+                    Retour aux e-mails
+                </Link>
+            }
+        >
             <div className="relative -mt-2 mb-5 overflow-hidden rounded-3xl bg-gradient-to-br from-admin-accent via-admin-accent/90 to-sky-500 p-5 text-white shadow-lg shadow-admin-accent/20 sm:p-6">
                 <span className="pointer-events-none absolute -right-10 -top-16 h-52 w-52 rounded-full bg-white/15 blur-3xl" />
                 <div className="relative flex items-center gap-4">
