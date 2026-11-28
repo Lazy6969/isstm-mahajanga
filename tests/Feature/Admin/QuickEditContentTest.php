@@ -525,6 +525,44 @@ it('lets a super admin clear a url value back to empty', function () {
     expect($content->refresh()->content_value_fr)->toBe('');
 });
 
+it('lets a super admin flag a bibliotheque slide as deleted, without touching its photo or caption', function () {
+    $admin = User::factory()->role(Role::Admin)->create();
+    // The migration already seeds this flag (defaulting to 'false') — update
+    // it in place rather than re-creating it, same as contact_formulaire_email
+    // in QuickContactTest.
+    $flag = SiteContent::where('content_key', 'bibliotheque_slide1_supprime')->first();
+    $image = SiteContent::factory()->create([
+        'content_key' => 'bibliotheque_slide1_image_path',
+        'type' => SiteContentType::Image,
+        'content_value_fr' => 'storage/site-content/photo.jpg',
+    ]);
+    $texte = SiteContent::factory()->create([
+        'content_key' => 'bibliotheque_slide1_texte',
+        'content_value_fr' => 'Légende en français',
+    ]);
+
+    $this->actingAs($admin)
+        ->post('/console/content/update', ['key' => 'bibliotheque_slide1_supprime', 'value' => 'true'])
+        ->assertRedirect();
+
+    expect($flag->refresh()->content_value_fr)->toBe('true');
+    expect($image->refresh()->content_value_fr)->toBe('storage/site-content/photo.jpg');
+    expect($texte->refresh()->content_value_fr)->toBe('Légende en français');
+});
+
+it('lets a super admin restore a previously deleted bibliotheque slide', function () {
+    $admin = User::factory()->role(Role::Admin)->create();
+    SiteContent::where('content_key', 'bibliotheque_slide1_supprime')
+        ->update(['content_value_fr' => 'true', 'content_value_en' => 'true', 'content_value_mg' => 'true']);
+
+    $this->actingAs($admin)
+        ->post('/console/content/update', ['key' => 'bibliotheque_slide1_supprime', 'value' => 'false'])
+        ->assertRedirect();
+
+    $flag = SiteContent::where('content_key', 'bibliotheque_slide1_supprime')->first();
+    expect($flag->content_value_fr)->toBe('false');
+});
+
 it('forbids a user without quick-edit.text from setting a url value', function () {
     $etudiant = User::factory()->role(Role::Etudiant)->create();
     SiteContent::factory()->create(['content_key' => 'bibliotheque_lien', 'type' => SiteContentType::Url]);

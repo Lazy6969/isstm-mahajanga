@@ -55,3 +55,35 @@ it('exposes each slide photo and caption set by a super admin', function () {
         ->where('content.bibliotheque_slide1_texte', 'Légende en français')
     );
 });
+
+it('exposes a deleted slide flag, keeping its photo and caption untouched', function () {
+    SiteContent::factory()->create([
+        'content_key' => 'bibliotheque_slide1_image_path',
+        'type' => SiteContentType::Image,
+        'content_value_fr' => 'storage/site-content/photo.jpg',
+        'content_value_en' => 'storage/site-content/photo.jpg',
+        'content_value_mg' => 'storage/site-content/photo.jpg',
+    ]);
+    SiteContent::factory()->create([
+        'content_key' => 'bibliotheque_slide1_texte',
+        'type' => SiteContentType::Text,
+        'content_value_fr' => 'Légende en français',
+        'content_value_en' => 'Légende en français',
+        'content_value_mg' => 'Légende en français',
+    ]);
+    // The migration already seeds this flag (defaulting to 'false') — update
+    // it in place rather than re-creating it, same as contact_formulaire_email
+    // in QuickContactTest.
+    SiteContent::where('content_key', 'bibliotheque_slide1_supprime')
+        ->update(['content_value_fr' => 'true', 'content_value_en' => 'true', 'content_value_mg' => 'true']);
+
+    // PhotoCarousel.jsx decides what to hide client-side — the backend's job
+    // is only to keep sharing the flag and never clear the image/caption it
+    // guards, so toggling it back on needs no re-upload.
+    $this->get('/bibliotheque')->assertInertia(fn ($page) => $page
+        ->component('Bibliotheque/Accueil')
+        ->where('content.bibliotheque_slide1_supprime', 'true')
+        ->where('content.bibliotheque_slide1_image_path', 'storage/site-content/photo.jpg')
+        ->where('content.bibliotheque_slide1_texte', 'Légende en français')
+    );
+});

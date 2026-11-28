@@ -1515,6 +1515,20 @@ class HomeContentSeeder extends Seeder
             ['type' => SiteContentType::Url, 'content_value_fr' => '', 'content_value_en' => '', 'content_value_mg' => ''],
         );
 
+        // Lets a super admin remove one of the 6 bibliothèque carousel photos
+        // (and its caption) from Bibliotheque/Accueil.jsx without touching
+        // the other five — a SiteContentType::Url flag ('true'/'false'),
+        // same non-translated reasoning as bibliotheque_lien above, and the
+        // same reversible toggle pattern as preinscription_asterisque_*
+        // below: the image/caption values themselves are never cleared,
+        // only hidden, so undeleting needs no re-upload.
+        for ($i = 1; $i <= 6; $i++) {
+            SiteContent::updateOrCreate(
+                ['content_key' => "bibliotheque_slide{$i}_supprime"],
+                ['type' => SiteContentType::Url, 'content_value_fr' => 'false', 'content_value_en' => 'false', 'content_value_mg' => 'false'],
+            );
+        }
+
         // The Bourse page's 3rd (admin-added) option — its link target stays
         // empty until a super admin sets one via the pencil (see Bourse.jsx /
         // EditableLinkButton); same Url reasoning as bibliotheque_lien above.

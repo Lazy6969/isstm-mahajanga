@@ -42,6 +42,8 @@ it('groups every bibliotheque_ key, including the url-typed link, under Biblioth
     SiteContent::factory()->create(['content_key' => 'bibliotheque_lien', 'type' => SiteContentType::Url]);
 
     $this->actingAs($admin)->get('/console/contenu')->assertInertia(fn ($page) => $page
-        ->has('groups.Bibliothèque', 2)
+        // 8, not 2: the migration-seeded `bibliotheque_slideN_supprime` delete
+        // flags (see PhotoCarousel.jsx) always exist alongside these two.
+        ->has('groups.Bibliothèque', 8)
     );
 });
