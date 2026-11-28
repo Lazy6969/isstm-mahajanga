@@ -19,6 +19,68 @@ it('lets the super admin list users', function () {
     $this->actingAs($admin)->get('/console/users')->assertOk();
 });
 
+it('lets the super admin create an account for any role', function () {
+    $admin = User::factory()->role(Role::Admin)->create();
+
+    $this->actingAs($admin)->post('/console/users', [
+        'nom' => 'Rakoto',
+        'prenom' => 'Jean',
+        'email' => 'jean.rakoto@example.com',
+        'phone' => '0340000001',
+        'password' => 'un-mot-de-passe-solide',
+        'password_confirmation' => 'un-mot-de-passe-solide',
+        'role' => 'enseignant',
+    ])->assertRedirect();
+
+    $created = User::where('email', 'jean.rakoto@example.com')->first();
+    expect($created)->not->toBeNull();
+    expect($created->name)->toBe('Rakoto Jean');
+    expect($created->phone)->toBe('0340000001');
+    expect($created->hasRole('enseignant'))->toBeTrue();
+    expect($created->role)->toBe(Role::Enseignant);
+    expect(Hash::check('un-mot-de-passe-solide', $created->password))->toBeTrue();
+});
+
+it('rejects creating an account with an email already in use', function () {
+    $admin = User::factory()->role(Role::Admin)->create();
+    User::factory()->create(['email' => 'taken@example.com']);
+
+    $this->actingAs($admin)->post('/console/users', [
+        'nom' => 'Rakoto',
+        'prenom' => 'Jean',
+        'email' => 'taken@example.com',
+        'password' => 'un-mot-de-passe-solide',
+        'password_confirmation' => 'un-mot-de-passe-solide',
+        'role' => 'etudiant',
+    ])->assertSessionHasErrors('email');
+});
+
+it('rejects creating an account with an unknown role', function () {
+    $admin = User::factory()->role(Role::Admin)->create();
+
+    $this->actingAs($admin)->post('/console/users', [
+        'nom' => 'Rakoto',
+        'prenom' => 'Jean',
+        'email' => 'jean.rakoto@example.com',
+        'password' => 'un-mot-de-passe-solide',
+        'password_confirmation' => 'un-mot-de-passe-solide',
+        'role' => 'role-qui-nexiste-pas',
+    ])->assertSessionHasErrors('role');
+});
+
+it('forbids a non-privileged user from creating an account', function () {
+    $etudiant = User::factory()->role(Role::Etudiant)->create();
+
+    $this->actingAs($etudiant)->post('/console/users', [
+        'nom' => 'Rakoto',
+        'prenom' => 'Jean',
+        'email' => 'jean.rakoto@example.com',
+        'password' => 'un-mot-de-passe-solide',
+        'password_confirmation' => 'un-mot-de-passe-solide',
+        'role' => 'etudiant',
+    ])->assertForbidden();
+});
+
 it('lets the super admin change another user\'s role', function () {
     $admin = User::factory()->role(Role::Admin)->create();
     $target = User::factory()->role(Role::Etudiant)->create();
@@ -28,6 +90,10 @@ it('lets the super admin change another user\'s role', function () {
         ->assertRedirect();
 
     expect($target->fresh()->hasRole('enseignant'))->toBeTrue();
+    // The legacy `role` column must follow too: FloatingAccountButton's
+    // `isCommunityMember` check reads it directly, not the Spatie role, so a
+    // stale value here hides "Modifier mon profil" from the new teacher.
+    expect($target->fresh()->role)->toBe(Role::Enseignant);
 });
 
 it('forbids a user from changing their own role', function () {

@@ -1,10 +1,11 @@
 import { useEffect, useMemo, useState } from 'react';
 import { router, usePage } from '@inertiajs/react';
-import { Ban, CheckCircle2, Key, Mail, Pencil, Phone, Search, Trash2, UserCheck, UserX, Users, Wifi } from 'lucide-react';
+import { Ban, CheckCircle2, Key, Mail, Pencil, Phone, Plus, Search, Trash2, UserCheck, UserX, Users, Wifi } from 'lucide-react';
 import AdminLayout from '../../../Components/Layout/AdminLayout';
 import ViewToggle from '../../../Components/Admin/ViewToggle';
 import UserProfilePanel from '../../../Components/Admin/UserProfilePanel';
 import ResetPasswordDialog from '../../../Components/Admin/ResetPasswordDialog';
+import CreateUserDialog from '../../../Components/Admin/CreateUserDialog';
 import { Select } from '../../../Components/ui/select';
 import { cn } from '../../../lib/utils';
 import { useTranslations } from '../../../lib/useTranslations';
@@ -157,12 +158,14 @@ export default function Index({ users, roles }) {
     const { t } = useTranslations();
     const ROLE_LABELS = roleLabels(t);
     const currentUserId = props.auth?.user?.id;
+    const canCreate = (props.auth?.permissions ?? []).includes('users.create');
     const [search, setSearch] = useState('');
     const [roleFilter, setRoleFilter] = useState('');
     const [statusFilter, setStatusFilter] = useState('');
     const [view, setView] = useState('list');
     const [editingId, setEditingId] = useState(null);
     const [resettingUser, setResettingUser] = useState(null);
+    const [creating, setCreating] = useState(false);
 
     const stats = useMemo(
         () => ({
@@ -282,6 +285,16 @@ export default function Index({ users, roles }) {
                             <span className="font-bold text-admin-text">{filtered.length}</span> {t('admin.users.count_suffix', 'utilisateur(s)')}
                         </p>
                         <ViewToggle view={view} onChange={setView} />
+                        {canCreate && (
+                            <button
+                                type="button"
+                                onClick={() => setCreating(true)}
+                                className="flex h-10 items-center gap-1.5 rounded-full bg-gradient-to-r from-admin-accent to-sky-500 px-4 text-sm font-bold text-white shadow-md shadow-admin-accent/30 transition hover:brightness-110"
+                            >
+                                <Plus className="h-4 w-4" aria-hidden="true" />
+                                {t('admin.users.create_title', 'Créer un compte')}
+                            </button>
+                        )}
                     </div>
                 </div>
                 <div className="flex gap-1.5 overflow-x-auto pb-0.5">
@@ -414,6 +427,7 @@ export default function Index({ users, roles }) {
                 )}
             </div>
             <ResetPasswordDialog open={resettingUser !== null} onClose={() => setResettingUser(null)} user={resettingUser} />
+            {canCreate && <CreateUserDialog open={creating} onClose={() => setCreating(false)} roles={roles} roleLabels={ROLE_LABELS} />}
         </AdminLayout>
     );
 }

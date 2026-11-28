@@ -93,12 +93,12 @@ class PermissionCatalog
     public const COMMUNITY_DOCUMENTS = ['lecons-sujets.moderate', 'lecons-sujets.delete'];
 
     /**
-     * Deleting an account from the "Gestion des comptes" screen — a step
+     * Creating and deleting an account from the "Comptes" screen — a step
      * above `users.edit`, which only lets an admin correct a profile.
      *
      * @var array<int, string>
      */
-    public const ACCOUNTS = ['users.delete'];
+    public const ACCOUNTS = ['users.delete', 'users.create'];
 
     /**
      * The Maintenance screen's "Maintenance des données" panel: exporting a

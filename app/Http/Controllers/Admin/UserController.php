@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\ActivityLog;
 use App\Models\User;
+use App\Role as LegacyRole;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
@@ -37,6 +38,41 @@ class UserController extends Controller
         ]);
     }
 
+    /**
+     * Lets a Super Admin create an account for any role directly from the
+     * Comptes screen — the only other way into the `users` table is the
+     * public candidate wizard (always `etudiant`), which doesn't help when
+     * onboarding a teacher, a scolarité/matériel staff member, or another
+     * Super Admin. Immediately verified: nothing else here goes through the
+     * e-mail confirmation a self-registered candidate needs.
+     */
+    public function store(Request $request): RedirectResponse
+    {
+        $validated = $request->validate([
+            'nom' => ['required', 'string', 'max:100'],
+            'prenom' => ['required', 'string', 'max:100'],
+            'email' => ['required', 'string', 'email', 'unique:users,email'],
+            'phone' => ['nullable', 'string', 'max:20'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'role' => ['required', 'string', 'exists:roles,name'],
+        ]);
+
+        $user = User::create([
+            'name' => trim("{$validated['nom']} {$validated['prenom']}"),
+            'email' => $validated['email'],
+            'phone' => $validated['phone'] ?? null,
+            'password' => $validated['password'],
+            'role' => self::legacyRoleFor($validated['role']),
+            'email_verified_at' => now(),
+        ]);
+
+        $user->syncRoles([$validated['role']]);
+
+        ActivityLog::record('user_created', "Compte créé : {$user->name} ({$validated['role']})", $user);
+
+        return back()->with('status', 'Compte créé.');
+    }
+
     public function updateRole(Request $request, User $user): RedirectResponse
     {
         abort_if($user->is($request->user()), 403, 'Vous ne pouvez pas modifier votre propre rôle.');
@@ -47,6 +83,7 @@ class UserController extends Controller
 
         $previousRole = $user->roles->first()?->name;
         $user->syncRoles([$validated['role']]);
+        $user->update(['role' => self::legacyRoleFor($validated['role'])]);
 
         ActivityLog::record(
             'role_changed',
@@ -56,6 +93,25 @@ class UserController extends Controller
         );
 
         return back()->with('status', 'Rôle mis à jour.');
+    }
+
+    /**
+     * The legacy `users.role` enum (App\Role) has no case for every Spatie
+     * role — `scolarite` in particular — so this only maps the ones that
+     * matter for `FloatingAccountButton`'s `isCommunityMember` check and
+     * `RoleHome`'s legacy fallback, which both read this column directly
+     * rather than Spatie's. Anything else keeps the column's own default
+     * ('user'), same as a candidate's account before any staff role exists.
+     */
+    private static function legacyRoleFor(string $spatieRole): LegacyRole
+    {
+        return match ($spatieRole) {
+            'super-admin' => LegacyRole::Admin,
+            'enseignant' => LegacyRole::Enseignant,
+            'etudiant' => LegacyRole::Etudiant,
+            'responsable-materiel' => LegacyRole::Materiel,
+            default => LegacyRole::User,
+        };
     }
 
     /**

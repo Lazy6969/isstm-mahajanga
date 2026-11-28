@@ -1,5 +1,5 @@
 import { Head, Link, usePage } from '@inertiajs/react';
-import { ArrowLeft, Check, Film, LogOut, Moon, Save, Sun, User } from 'lucide-react';
+import { ArrowLeft, BookUser, Check, Film, LogOut, Moon, Save, Sun, User } from 'lucide-react';
 import AppLayout from '../../Components/Layout/AppLayout';
 import { Card } from '../../Components/ui/card';
 import LanguageSwitcher from '../../Components/Layout/LanguageSwitcher';
@@ -108,6 +108,16 @@ export default function Index() {
                     </div>
                 </div>
             </Card>
+
+            {user?.role === 'enseignant' && (
+                <Link href="/ma-fiche-enseignant" className="mt-6 flex items-center justify-between gap-3 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-community-accent dark:border-slate-700 dark:bg-slate-800">
+                    <div className="flex items-center gap-2.5 text-sm text-slate-600 dark:text-slate-300">
+                        <BookUser className="h-4 w-4" aria-hidden="true" />
+                        <span className="font-semibold text-isstm-navy dark:text-white">{t('parametres.ma_fiche_enseignant', 'Ma fiche enseignant')}</span>
+                    </div>
+                    <span className="text-xs text-slate-400">{t('parametres.ma_fiche_enseignant_hint', 'Photo, spécialité et présentation')}</span>
+                </Link>
+            )}
 
             <Card className="mt-6 flex items-center justify-between p-5">
                 <span className="text-sm font-semibold text-isstm-navy dark:text-white">{t('parametres.langue', "Langue de l'application")}</span>

@@ -68,6 +68,11 @@ export default function FloatingAccountButton({ size = 'h-12 w-12', side = 'righ
                         <Link href="/profil">{t('profil.modifier_profil', 'Modifier mon profil')}</Link>
                     </DropdownMenuItem>
                 )}
+                {user?.role === 'enseignant' && (
+                    <DropdownMenuItem asChild>
+                        <Link href="/ma-fiche-enseignant">{t('profil.ma_fiche_enseignant', 'Ma fiche enseignant')}</Link>
+                    </DropdownMenuItem>
+                )}
                 {hasPendingPreinscription && (
                     <DropdownMenuItem asChild>
                         <Link href="/mon-dossier">{t('profil.mon_dossier', 'Mon dossier de préinscription')}</Link>
