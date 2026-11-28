@@ -127,22 +127,22 @@ function GradientPlaqueItem({ item, isLast }) {
     const [ref, value, active] = useRevealingCount(item.target);
 
     return (
-        <div ref={ref} className="relative flex flex-1 flex-col items-center gap-2 px-6 py-7 text-center sm:py-8">
+        <div ref={ref} className="relative flex flex-1 flex-col items-center gap-1 px-2 py-5 text-center sm:gap-2 sm:px-6 sm:py-8">
             <span
-                className={`flex h-12 w-12 items-center justify-center rounded-full bg-white/15 text-white backdrop-blur-sm ${ICON_POP_CLASS} ${iconPopStyle(active)}`}
+                className={`flex h-9 w-9 items-center justify-center rounded-full bg-white/15 text-white backdrop-blur-sm sm:h-12 sm:w-12 ${ICON_POP_CLASS} ${iconPopStyle(active)}`}
             >
-                <EditableIcon contentKey={item.iconKey} value={item.iconValue} className="h-6 w-6" />
+                <EditableIcon contentKey={item.iconKey} value={item.iconValue} className="h-4 w-4 sm:h-6 sm:w-6" />
             </span>
-            <p className="text-3xl leading-none font-extrabold text-white sm:text-4xl">
+            <p className="text-xl leading-none font-extrabold text-white sm:text-3xl md:text-4xl">
                 +<EditableText as="span" contentKey={item.statKey}>{String(value)}</EditableText>
             </p>
-            <p className="text-xs font-medium tracking-wide text-white/80 uppercase">
+            <p className="text-[0.65rem] font-medium tracking-wide text-white/80 uppercase sm:text-xs">
                 <EditableText as="span" contentKey={item.labelKey}>{item.label}</EditableText>
             </p>
 
             {!isLast && (
                 <span
-                    className="pointer-events-none absolute inset-x-10 bottom-0 h-px bg-white/20 sm:inset-x-auto sm:inset-y-8 sm:right-0 sm:h-auto sm:w-px"
+                    className="pointer-events-none absolute inset-y-5 right-0 h-auto w-px bg-white/20 sm:inset-y-8"
                     aria-hidden="true"
                 />
             )}
@@ -154,7 +154,7 @@ function DesignPlaqueGradient({ items, pencil }) {
     return (
         <section className="relative -mt-20 z-20 mx-auto max-w-5xl px-6">
             {pencil}
-            <div className="relative flex flex-col overflow-hidden rounded-[1.75rem] bg-gradient-to-r from-isstm-navy via-isstm-navy-dark to-isstm-gold shadow-2xl shadow-black/30 sm:flex-row">
+            <div className="relative flex flex-row overflow-hidden rounded-[1.75rem] bg-gradient-to-r from-isstm-navy via-isstm-navy-dark to-isstm-gold shadow-2xl shadow-black/30">
                 {items.map((item, index) => (
                     <GradientPlaqueItem key={item.statKey} item={item} isLast={index === items.length - 1} />
                 ))}
