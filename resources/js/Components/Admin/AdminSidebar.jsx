@@ -22,6 +22,7 @@ import {
     Archive,
     ShieldCheck,
     History,
+    Mail,
     Palette,
     BarChart3,
     Boxes,
@@ -111,6 +112,7 @@ function buildNavGroups(t) {
             items: [
                 { href: '/console/settings/appearance', label: t('admin.nav.apparence', 'Apparence'), icon: Palette, permission: 'settings.manage' },
                 { href: '/console/statistiques', label: t('admin.nav.statistics', 'Statistiques'), icon: BarChart3, permission: 'statistics.view' },
+                { href: '/console/settings/mail', label: t('admin.nav.email', 'E-mail'), icon: Mail, permission: 'settings.manage' },
                 { href: '/console/settings/maintenance', label: t('admin.nav.maintenance', 'Maintenance'), icon: TriangleAlert, permission: 'settings.manage' },
             ],
         },

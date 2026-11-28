@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\ActionArchiveRecorder;
 use App\Models\User;
+use App\Services\DynamicMailConfigurator;
 use Illuminate\Auth\Notifications\VerifyEmail;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Http\Request;
@@ -28,6 +29,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        DynamicMailConfigurator::apply();
+
         $this->app->make(ActionArchiveRecorder::class)->listen();
 
         RateLimiter::for('login', function (Request $request) {

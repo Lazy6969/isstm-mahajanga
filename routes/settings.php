@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AppearanceSettingsController;
+use App\Http\Controllers\Admin\MailSettingsController;
 use App\Http\Controllers\Admin\MaintenanceSettingsController;
 use App\Http\Controllers\Admin\SystemDataController;
 use Illuminate\Support\Facades\Route;
@@ -8,6 +9,12 @@ use Illuminate\Support\Facades\Route;
 Route::middleware(['auth'])->prefix('console/settings')->name('admin.settings.')->group(function () {
     Route::get('appearance', [AppearanceSettingsController::class, 'index'])->middleware('can:settings.manage')->name('appearance');
     Route::put('appearance', [AppearanceSettingsController::class, 'update'])->middleware('can:settings.manage')->name('appearance.update');
+
+    // Lets a Super Admin configure outgoing SMTP e-mail without shell/.env
+    // access — see MailSettingsController and AppServiceProvider::boot().
+    Route::get('mail', [MailSettingsController::class, 'index'])->middleware('can:settings.manage')->name('mail');
+    Route::put('mail', [MailSettingsController::class, 'update'])->middleware('can:settings.manage')->name('mail.update');
+    Route::post('mail/test', [MailSettingsController::class, 'test'])->middleware('can:settings.manage')->name('mail.test');
 
     Route::get('maintenance', [MaintenanceSettingsController::class, 'index'])->middleware('can:settings.manage')->name('maintenance');
     Route::put('maintenance', [MaintenanceSettingsController::class, 'update'])->middleware('can:settings.manage')->name('maintenance.update');
